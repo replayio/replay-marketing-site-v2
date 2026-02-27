@@ -1,0 +1,281 @@
+import type { Metadata } from "next";
+import Image from "next/image";
+import Footer from "@/components/Footer";
+import Nav from "@/components/Nav";
+
+export const metadata: Metadata = {
+  title: "About Replay — Making Software Visible",
+  description:
+    "Replay records your software and shows you exactly what happened. Founded by ex-Mozilla engineers, we're building the debugging tools that AI agents and developers need to fix bugs on the first try.",
+  alternates: { canonical: "/about" },
+  openGraph: {
+    title: "About Replay — Making Software Visible",
+    description:
+      "Replay records your software and shows you exactly what happened. Founded by ex-Mozilla engineers, we're building the debugging tools that AI agents and developers need to fix bugs on the first try.",
+  },
+};
+
+const team = [
+  {
+    name: "Brian Hackett",
+    role: "CEO",
+    photo: "/team/brian-hackett.png",
+    bio: "Stanford Ph.D. with 10 years at Mozilla, where he worked on the systems that power the Firefox browser engine. Brian started Replay to solve the problem he spent a decade fighting: helping developers understand complex systems when things go wrong. When he\u2019s not building Replay, he\u2019s sailing or traveling in a van.",
+  },
+  {
+    name: "Mark Erikson",
+    role: "Software Engineer",
+    photo: "/team/mark-erikson.png",
+    bio: "The maintainer of Redux and creator of Redux Toolkit \u2014 tools used by millions of React developers worldwide. Mark brings deep expertise in developer tooling and an obsessive focus on developer experience. Based in Southwest Ohio.",
+  },
+  {
+    name: "Dominik Seifert",
+    role: "Software Engineer",
+    photo: "/team/dominik-seifert.png",
+    bio: "Two decades of software engineering, from MMORPG servers to CUDA optimization. Dominik holds a Ph.D. in systems analysis and brings the kind of low-level systems knowledge that makes Replay\u2019s recording engine possible. Based in Taiwan, originally from Germany.",
+  },
+  {
+    name: "Thomas Daly",
+    role: "Head of Product",
+    photo: null,
+    bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
+  },
+  {
+    name: "Strider Wilson",
+    role: "Software Engineer",
+    photo: null,
+    bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui vivamus sagittis lacus vel augue.",
+  },
+  {
+    name: "Michael Ward",
+    role: "Dev Ops",
+    photo: null,
+    bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas faucibus mollis interdum. Cras mattis consectetur purus sit amet fermentum aenean lacinia bibendum nulla sed.",
+  },
+  {
+    name: "Filip Hric",
+    role: "Community Manager",
+    photo: null,
+    bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis risus eget urna mollis ornare vel eu leo. Vestibulum id ligula porta felis euismod semper.",
+  },
+  {
+    name: "Brett Lamy",
+    role: "Software Engineer",
+    photo: null,
+    bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eu leo quam pellentesque ornare sem lacinia quam venenatis vestibulum. Duis mollis est non commodo luctus.",
+  },
+];
+
+const values = [
+  {
+    title: "Clarity over cleverness",
+    description:
+      "We build tools that show you exactly what happened \u2014 no abstractions, no hand-waving. That same principle runs through everything we do: our code, our communication, and our product.",
+  },
+  {
+    title: "Long-term over fast",
+    description:
+      "We\u2019re not optimizing for the next quarter. We\u2019re building technology that changes how software gets built and debugged. That takes patience, and we\u2019re built for it.",
+  },
+  {
+    title: "Open over closed",
+    description:
+      "We\u2019re a distributed team across time zones and continents. We care about what you ship, not when you\u2019re online. And we believe the tools that make software understandable should be accessible to everyone \u2014 not just engineers at big companies.",
+  },
+];
+
+export default function AboutPage() {
+  return (
+    <div className="min-h-screen bg-background text-foreground">
+      <Nav />
+
+      {/* Hero */}
+      <section className="hero-fade-in px-6 pt-24 pb-20 max-w-3xl mx-auto text-center">
+        <h1 className="text-5xl sm:text-6xl font-bold leading-[1.1] tracking-tight mb-6">
+          We make software{" "}
+          <span className="text-brand-pink">visible.</span>
+        </h1>
+        <p className="text-lg text-muted max-w-2xl mx-auto leading-relaxed">
+          Replay started with a simple belief: if you can&apos;t see what your
+          software is doing, you can&apos;t fix it. We built the technology to
+          change that &mdash; for developers, for AI agents, and for anyone
+          building with code.
+        </p>
+      </section>
+
+      {/* Mission / Story */}
+      <div className="bg-surface-tinted">
+        <section className="px-6 py-24 max-w-3xl mx-auto">
+          <p className="text-sm font-medium uppercase tracking-widest text-brand-pink mb-4">
+            Where we started
+          </p>
+          <div className="space-y-6 text-muted text-lg leading-relaxed">
+            <p>
+              Debugging has always been the same: guess what went wrong, try a
+              fix, see if it works. Repeat until you get lucky or give up and
+              rewrite.
+            </p>
+            <p>
+              We thought that was broken. Our founders spent a decade at Mozilla
+              working on the Firefox browser engine &mdash; one of the most
+              complex software systems ever built. They saw firsthand how much
+              time gets lost to bugs that nobody can reproduce, errors that
+              nobody can explain, and fixes that nobody is confident about.
+            </p>
+            <p>
+              So they built Replay: a way to record exactly what your software
+              did and play it back, step by step. Not a video. Not a log file.{" "}
+              <span className="text-foreground font-medium">
+                A deterministic capture of every DOM change, network request, and
+                state update
+              </span>{" "}
+              &mdash; the full picture, down to the last detail.
+            </p>
+            <p>
+              That recording changes everything. When you can see what actually
+              happened, debugging goes from guessing to knowing.
+            </p>
+          </div>
+        </section>
+      </div>
+
+      {/* What We're Building */}
+      <section className="px-6 py-24 max-w-3xl mx-auto">
+        <p className="text-sm font-medium uppercase tracking-widest text-brand-pink mb-4">
+          Where we&apos;re going
+        </p>
+        <div className="space-y-6 text-muted text-lg leading-relaxed">
+          <p>
+            Today, AI agents write code faster than any human. But when they hit
+            a bug, they&apos;re stuck &mdash; guessing at fixes with no way to
+            see what went wrong. They loop, retry, and burn through tokens on
+            the same mistake.
+          </p>
+          <p>
+            Replay gives agents eyes on the runtime. Our MCP server analyzes
+            recordings automatically, finds the root cause, and delivers a
+            specific fix &mdash; so your agent implements the right solution on
+            the first try.
+          </p>
+          <p>
+            For developers, that means fewer debugging hours and faster CI. For
+            builders using tools like Lovable, Bolt, and Replit, it means bugs
+            that actually get fixed instead of going in circles.
+          </p>
+          <p>
+            We&apos;re building toward a world where every bug report includes a
+            recording, every test failure comes with a root cause, and no one
+            &mdash; human or AI &mdash;{" "}
+            <span className="text-foreground font-medium">
+              has to debug blind.
+            </span>
+          </p>
+        </div>
+      </section>
+
+      {/* Values */}
+      <div className="bg-surface-tinted">
+        <section className="px-6 py-24 max-w-5xl mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-4">How we work</h2>
+          <p className="text-muted text-center max-w-2xl mx-auto mb-16">
+            The principles behind the product.
+          </p>
+          <div className="grid md:grid-cols-3 gap-8">
+            {values.map((value) => (
+              <div
+                key={value.title}
+                className="rounded-xl border border-border bg-surface p-8"
+              >
+                <h3 className="text-lg font-semibold mb-3">{value.title}</h3>
+                <p className="text-sm text-muted leading-relaxed">
+                  {value.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </section>
+      </div>
+
+      {/* Team */}
+      <section className="px-6 py-24 max-w-5xl mx-auto">
+        <h2 className="text-3xl font-bold text-center mb-4">The team</h2>
+        <p className="text-muted text-center max-w-2xl mx-auto mb-16">
+          Founded by ex-Mozilla engineers. Distributed globally. Building the
+          future of debugging.
+        </p>
+        <div className="grid md:grid-cols-3 gap-8">
+          {team.map((person) => (
+            <div
+              key={person.name}
+              className="rounded-xl border border-border bg-surface overflow-hidden"
+            >
+              <div className="aspect-square bg-surface-hover relative">
+                {person.photo ? (
+                  <Image
+                    src={person.photo}
+                    alt={person.name}
+                    fill
+                    className="object-cover"
+                  />
+                ) : (
+                  <div className="absolute inset-0 flex items-center justify-center text-muted/30">
+                    <svg
+                      width="64"
+                      height="64"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="1.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    >
+                      <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                      <circle cx="12" cy="7" r="4" />
+                    </svg>
+                  </div>
+                )}
+              </div>
+              <div className="p-6">
+                <h3 className="text-lg font-semibold">{person.name}</h3>
+                <p className="text-sm text-brand-purple mb-3">{person.role}</p>
+                <p className="text-sm text-muted leading-relaxed">
+                  {person.bio}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* CTA */}
+      <div className="bg-surface-tinted">
+        <section className="px-6 py-24 max-w-3xl mx-auto text-center">
+          <h2 className="text-3xl sm:text-4xl font-bold mb-4 leading-tight">
+            See what your software is doing.
+          </h2>
+          <p className="text-muted max-w-xl mx-auto mb-8 text-lg">
+            Try Replay free &mdash; whether you&apos;re a developer adding MCP
+            to your agent or a builder who wants bugs fixed on the first try.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="https://docs.replay.io/basics/replay-mcp/overview"
+              className="rounded-full px-8 py-3.5 text-base font-medium text-white hover:opacity-90 transition"
+              style={{ background: "var(--brand-gradient)" }}
+            >
+              Try Replay Free
+            </a>
+            <a
+              href="/#how-it-works"
+              className="rounded-full border border-border px-8 py-3.5 text-base font-medium text-muted hover:border-foreground/20 hover:text-foreground transition"
+            >
+              See How It Works
+            </a>
+          </div>
+        </section>
+      </div>
+
+      <Footer />
+    </div>
+  );
+}

@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --background: #ffffff;
+  --foreground: #111111;
+  --muted: #6b7280;
+  --border: #e5e7eb;
+  --surface: #f9fafb;
+  --surface-hover: #f3f4f6;
+  --surface-tinted: #f5f3ff;
+  --surface-tinted-hover: #ede9fe;
+  --brand-pink: #F02D5E;
+  --brand-purple: #9089fc;
+  --brand-gradient: linear-gradient(135deg, #F02D5E 0%, #9089fc 100%);
+}
+
+.dark {
+  --background: #0a0a0a;
+  --foreground: #f0f0f0;
+  --muted: #9ca3af;
+  --border: #1f2937;
+  --surface: #111827;
+  --surface-hover: #1f2937;
+  --surface-tinted: #110f1f;
+  --surface-tinted-hover: #1a1730;
+}
+
+@keyframes heroFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-fade-in {
+  animation: heroFadeIn 0.9s ease-out both;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@theme inline {
+  --animate-marquee: marquee 25s linear infinite;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --color-surface: var(--surface);
+  --color-surface-hover: var(--surface-hover);
+  --color-surface-tinted: var(--surface-tinted);
+  --color-surface-tinted-hover: var(--surface-tinted-hover);
+  --color-brand-pink: var(--brand-pink);
+  --color-brand-purple: var(--brand-purple);
+  --font-sans: var(--font-space-grotesk), system-ui, sans-serif;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-space-grotesk), system-ui, sans-serif;
+}
