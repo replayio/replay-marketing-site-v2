@@ -7,14 +7,11 @@ import Link from "next/link";
 import ThemeToggle from "@/components/ThemeToggle";
 
 const links = [
-  { href: "/", label: "Replay MCP" },
-  { href: "/extension", label: "Replay Extension" },
-  { href: "/builder", label: "Replay Builder" },
-  {
-    href: "https://docs.replay.io/basics/replay-mcp/overview",
-    label: "Docs",
-  },
+  { href: "/how-it-works", label: "How it Works" },
+  { href: "/for-engineers", label: "For Engineers" },
+  { href: "/for-vibe-coders", label: "For Vibe Coders" },
   { href: "/pricing", label: "Pricing" },
+  { href: "https://docs.replay.io", label: "Docs" },
 ];
 
 export default function Nav() {

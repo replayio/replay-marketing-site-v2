@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Link from "next/link";
+import AudienceSplit from "@/components/AudienceSplit";
 import FeatureTabs from "@/components/FeatureTabs";
 import Footer from "@/components/Footer";
 import { FAQSchema, OrganizationSchema } from "@/components/JsonLd";
@@ -89,14 +89,9 @@ export default function Home() {
               See How It Works
             </a>
           </div>
-          <p className="mt-12 text-xs text-muted/60">
-            Vibecoding with Lovable, Base44, Bolt or Replit?
-            <br />
-            Check out our{" "}
-            <Link href="/extension" className="font-semibold hover:text-muted transition">
-              Chrome extension
-            </Link>
-          </p>
+          <div className="mt-14 w-full px-2">
+            <AudienceSplit />
+          </div>
         </section>
 
         {/* Logo Marquee */}
