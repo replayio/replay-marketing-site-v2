@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Footer from "@/components/Footer";
 import Nav from "@/components/Nav";
+import CyclingTool from "./CyclingTool";
 
 export const metadata: Metadata = {
   title: "Replay for Vibe Coders",
@@ -22,7 +23,7 @@ export default function ForVibeCodersPage() {
       {/* Hero */}
       <section className="hero-fade-in px-6 pt-24 pb-20 max-w-3xl mx-auto text-center">
         <h1 className="text-4xl sm:text-5xl font-bold leading-[1.1] tracking-tight mb-6">
-          You built something with Lovable.
+          You built something with <CyclingTool />.
           <br />
           It was working.{" "}
           <span className="text-brand-pink">Now it&apos;s not.</span>
