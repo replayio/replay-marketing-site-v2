@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Footer from "@/components/Footer";
 import Nav from "@/components/Nav";
+import replayLogoVariations from "@/images/replay-logo-variations.gif";
 
 export const metadata: Metadata = {
   title: "About Replay — Making Software Visible",
@@ -101,6 +102,14 @@ export default function AboutPage() {
           change that &mdash; for developers, for AI agents, and for anyone
           building with code.
         </p>
+        <div className="mt-12 mx-auto max-w-sm">
+          <Image
+            src={replayLogoVariations}
+            alt="Replay logo variations"
+            className="w-full rounded-xl"
+            unoptimized
+          />
+        </div>
       </section>
 
       {/* Mission / Story */}
