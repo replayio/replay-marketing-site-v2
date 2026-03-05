@@ -8,8 +8,6 @@ import ThemeToggle from "@/components/ThemeToggle";
 
 const links = [
   { href: "/how-it-works", label: "How it Works" },
-  { href: "/for-engineers", label: "For Engineers" },
-  { href: "/for-vibe-coders", label: "For Vibe Coders" },
   { href: "/pricing", label: "Pricing" },
   { href: "https://docs.replay.io", label: "Docs" },
 ];

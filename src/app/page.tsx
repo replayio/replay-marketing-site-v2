@@ -1,5 +1,4 @@
 import Image from "next/image";
-import AudienceSplit from "@/components/AudienceSplit";
 import FeatureTabs from "@/components/FeatureTabs";
 import Footer from "@/components/Footer";
 import { FAQSchema, OrganizationSchema } from "@/components/JsonLd";
@@ -66,18 +65,22 @@ export default function Home() {
         />
         <section className="hero-fade-in relative z-10 flex flex-col items-center text-center px-6 pt-24 pb-16 max-w-4xl mx-auto">
           <h1 className="text-5xl sm:text-6xl font-bold leading-[1.1] tracking-tight mb-6">
-            Superpowers for
+            Your agent can&apos;t fix
             <br />
-            <span className="text-brand-pink">your agent</span>
+            <span className="text-brand-pink">what it can&apos;t see.</span>
           </h1>
           <p className="text-lg text-muted max-w-2xl mb-10 leading-relaxed">
-            Replay captures exactly what happened in the browser — and tells
-            your coding agent or AI tool how to fix it. No manual debugging
-            required.
+            Replay captures the full browser runtime — every DOM change, network
+            request, and state update — and turns it into a root cause and a
+            specific fix. No manual debugging.
           </p>
-          <div className="mt-12 w-full px-2">
-            <AudienceSplit />
-          </div>
+          <a
+            href="https://docs.replay.io/basics/replay-mcp/overview"
+            className="inline-block rounded-full px-8 py-3.5 text-base font-medium text-white hover:opacity-90 transition"
+            style={{ background: "var(--brand-gradient)" }}
+          >
+            Get started free
+          </a>
         </section>
 
         {/* Logo Marquee */}
@@ -90,9 +93,9 @@ export default function Home() {
       <div className="bg-surface-tinted">
       <section id="problem" className="px-6 py-24 max-w-3xl mx-auto">
         <h2 className="text-3xl sm:text-4xl font-bold text-center mb-6 leading-tight">
-          Your agent can&apos;t debug
+          Your agent reads code.
           <br />
-          what it can&apos;t see.
+          <span className="text-brand-pink">It can&apos;t read runtime.</span>
         </h2>
         <div className="space-y-6 text-muted text-lg leading-relaxed">
           <p>
@@ -120,7 +123,7 @@ export default function Home() {
       {/* Solution Bridge */}
       <section className="px-6 py-20 max-w-3xl mx-auto text-center">
         <p className="text-sm font-medium uppercase tracking-widest text-brand-pink mb-4">
-          That&apos;s why we built Replay MCP
+          That&apos;s why we built Replay
         </p>
         <h2 className="text-3xl sm:text-4xl font-bold mb-6 leading-tight">
           Give your agent eyes{" "}
@@ -129,11 +132,62 @@ export default function Home() {
         </h2>
         <p className="text-lg text-muted max-w-2xl mx-auto leading-relaxed">
           Replay records a deterministic capture of your browser session — every
-          DOM change, network request, and state update. Replay MCP analyzes
-          the recording, identifies the root cause, and delivers a detailed fix
-          directly to your coding agent.
+          DOM change, network request, and state update. It analyzes the
+          recording, identifies the root cause, and delivers a detailed fix
+          directly to your coding agent via MCP, or in plain English via the
+          Chrome extension.
         </p>
       </section>
+
+      {/* Two Ways to Connect */}
+      <div className="bg-surface-tinted">
+        <section className="px-6 py-20 max-w-3xl mx-auto">
+          <h2 className="text-2xl font-bold text-center mb-2">
+            Works where you already work.
+          </h2>
+          <p className="text-muted text-center mb-10">
+            Same recording engine. Two ways to connect.
+          </p>
+          <div className="grid sm:grid-cols-2 gap-6">
+            <div className="rounded-xl border border-border bg-surface p-6">
+              <p className="text-xs font-medium uppercase tracking-widest text-brand-purple mb-3">
+                From your IDE
+              </p>
+              <div className="rounded-lg bg-surface-tinted font-mono text-sm px-4 py-3 mb-4 select-all">
+                npx replay-mcp install
+              </div>
+              <p className="text-sm text-muted leading-relaxed mb-4">
+                Connects to Cursor, Claude Code, Copilot, and Windsurf. Your
+                agent gets root cause and a specific fix automatically.
+              </p>
+              <a
+                href="https://docs.replay.io/basics/replay-mcp/overview"
+                className="text-sm font-medium text-brand-purple hover:opacity-80 transition"
+              >
+                Read the docs &rarr;
+              </a>
+            </div>
+            <div className="rounded-xl border border-border bg-surface p-6">
+              <p className="text-xs font-medium uppercase tracking-widest text-brand-pink mb-3">
+                From Chrome
+              </p>
+              <div className="rounded-lg bg-surface-tinted text-sm px-4 py-3 mb-4 text-muted">
+                Replay Chrome Extension
+              </div>
+              <p className="text-sm text-muted leading-relaxed mb-4">
+                Record a bug in your browser, get a plain-English fix to paste
+                into your AI tool. No setup required.
+              </p>
+              <a
+                href="#"
+                className="text-sm font-medium text-brand-pink hover:opacity-80 transition"
+              >
+                Install for Chrome &rarr;
+              </a>
+            </div>
+          </div>
+        </section>
+      </div>
 
       {/* How It Works — Interactive Tabs */}
       <div id="how-it-works" className="bg-surface-tinted">
@@ -146,7 +200,7 @@ export default function Home() {
           What your agent gets from Replay
         </h2>
         <p className="text-muted text-center max-w-2xl mx-auto mb-16">
-          Replay MCP turns your agent from a code guesser into a code fixer.
+          Three things Replay delivers on every bug.
         </p>
         <div className="grid md:grid-cols-3 gap-8">
           <div className="rounded-xl border border-border bg-surface p-8">
@@ -154,9 +208,9 @@ export default function Home() {
               Root-cause analysis, automated
             </h3>
             <p className="text-sm text-muted leading-relaxed">
-              Replay MCP doesn&apos;t just report the error. It traces through
-              the recording to find the exact cause — the state change, the
-              failed request, the bad render — and explains why it happened.
+              Replay doesn&apos;t just report the error. It traces through the
+              recording to find the exact cause — the state change, the failed
+              request, the bad render — and explains why it happened.
             </p>
           </div>
           <div className="rounded-xl border border-border bg-surface p-8">
@@ -176,7 +230,7 @@ export default function Home() {
             <p className="text-sm text-muted leading-relaxed">
               Replay MCP connects to Claude Code, Cursor, Copilot, Windsurf,
               and any agent that supports MCP. Add it once and every agent in
-              your workflow gets runtime intelligence.
+              your workflow gets full runtime visibility.
             </p>
           </div>
         </div>
@@ -317,7 +371,7 @@ export default function Home() {
           Built for teams shipping with agents
         </h2>
         <p className="text-muted text-center max-w-2xl mx-auto mb-16">
-          Wherever your agent gets stuck on a bug it can&apos;t see, Replay MCP
+          Wherever your agent gets stuck on a bug it can&apos;t see, Replay
           closes the gap.
         </p>
         <div className="grid md:grid-cols-2 gap-8">
@@ -325,22 +379,22 @@ export default function Home() {
             {
               title: "Agent-assisted development",
               description:
-                "Your coding agent hits a failing test or runtime error. Instead of looping, it sends the recording to Replay MCP and gets a precise fix back — then implements it.",
+                "Your coding agent hits a failing test or runtime error. Instead of looping, it sends the recording to Replay and gets a precise fix back — then implements it.",
             },
             {
               title: "Flaky tests in CI",
               description:
-                "Record every test run. When a test flakes, Replay MCP analyzes the recording and delivers the root cause and fix to your agent — no manual investigation needed.",
+                "Record every test run. When a test flakes, Replay analyzes the recording and delivers the root cause and fix to your agent — no manual investigation needed.",
             },
             {
               title: "Bug triage on autopilot",
               description:
-                "A user reports a bug. Replay captures the session. Replay MCP generates the diagnosis and fix. Your agent applies it. You review the PR.",
+                "A user reports a bug. Replay captures the session, generates the diagnosis and fix. Your agent applies it. You review the PR.",
             },
             {
               title: "Unblocking stuck agents",
               description:
-                "When your agent loops on a problem — retrying the same patch, failing the same test — Replay MCP gives it the runtime context it needs to break out.",
+                "When your agent loops on a problem — retrying the same patch, failing the same test — Replay gives it the runtime context it needs to break out.",
             },
           ].map((persona) => (
             <div
@@ -360,12 +414,12 @@ export default function Home() {
       <div className="bg-surface-tinted">
       <section className="px-6 py-24 max-w-4xl mx-auto">
         <h2 className="text-3xl font-bold text-center mb-12">
-          Replay MCP vs. the old way
+          Replay vs. the old way
         </h2>
         <div className="grid md:grid-cols-2 gap-8">
           <div className="rounded-xl border border-border bg-surface p-8">
             <h3 className="text-brand-pink font-semibold text-sm uppercase tracking-widest mb-4">
-              Without Replay MCP
+              Without Replay
             </h3>
             <ul className="space-y-3 text-sm text-muted">
               <li>Agent guesses at the fix, fails, retries in a loop</li>
@@ -377,7 +431,7 @@ export default function Home() {
           </div>
           <div className="rounded-xl border border-brand-purple/30 bg-brand-purple/5 p-8">
             <h3 className="text-brand-purple font-semibold text-sm uppercase tracking-widest mb-4">
-              With Replay MCP
+              With Replay
             </h3>
             <ul className="space-y-3 text-sm text-foreground/80">
               <li>Agent gets a detailed fix from the recording on the first try</li>
@@ -516,13 +570,13 @@ export default function Home() {
             className="inline-block rounded-full px-8 py-3.5 text-base font-medium text-white hover:opacity-90 transition"
             style={{ background: "var(--brand-gradient)" }}
           >
-            Add Replay MCP to Your Agent
+            Get started free
           </a>
           <a
-            href="/for-engineers"
+            href="#"
             className="text-sm font-medium text-muted hover:text-foreground transition"
           >
-            Or start with the Chrome extension &rarr;
+            Or install the Chrome extension &rarr;
           </a>
         </div>
       </section>
