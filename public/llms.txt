@@ -1,0 +1,41 @@
+# Replay
+
+> Replay is a time-travel debugging platform that gives engineers and their AI coding agents the runtime visibility they need to diagnose and fix bugs — without guesswork, repeated attempts, or manual investigation. Replay captures the full browser runtime at the Chromium level and uses AI to deliver root cause analysis and implementation-ready fixes.
+
+## Product
+
+- [Replay MCP](https://replay.io/for-engineers): MCP server that connects Replay's runtime recordings to AI coding agents (Cursor, Claude Code, Copilot, Windsurf). When a bug is recorded, the agent receives a precise root cause diagnosis and a specific, implementation-ready fix — delivered directly inside the IDE.
+- [Replay Chrome Extension](https://replay.io/for-vibe-coders): Browser extension for recording bugs in web applications. Click record, reproduce the bug, stop recording. Replay analyzes the session and returns a plain-English explanation of what broke and how to fix it. Designed for non-technical users building with AI tools like Lovable, Replit, and Base44.
+- [Replay Builder](https://replay.io): Vibe coding tool used as a live demo of Replay MCP's capabilities.
+
+## How It Works
+
+Replay records web application execution at the Chromium level — not a video or JavaScript-level approximation. This produces a deterministic recording that captures every event, network request, DOM state change, and component render. After recording, the session can be analyzed retroactively: users can add console logs and inspect any moment in time without re-running the app. AI agents access this data via the Replay MCP server to produce automated root cause analysis and specific fixes.
+
+## Who It's For
+
+- **Front-end engineers and technical leads** using AI coding agents (Cursor, Claude Code, Windsurf, Copilot). Replay MCP closes the gap between code-reading and runtime visibility — the cause of most bugs agents can't fix.
+- **Vibe coders** — non-technical users building web apps with AI tools. The Chrome extension records the bug and returns a paste-ready fix. No coding skills required.
+
+## Key Differentiators
+
+- Only deterministic browser recording at the Chromium level (not a JS shim or screen capture)
+- Retroactive inspection: add console logs and inspect state after recording, without re-running
+- MCP server model: works with any AI coding agent, inside any IDE
+- AI-powered root cause analysis on full runtime recordings, not just error logs
+- Integrates with Playwright, Cypress, and Selenium; runs in CI
+
+## Pricing
+
+Free to start. No credit card required for the Chrome extension or Replay MCP.
+
+## Documentation
+
+- [Replay MCP Overview](https://docs.replay.io/basics/replay-mcp/overview)
+- [Getting Started](https://docs.replay.io)
+
+## Company
+
+Replay is trusted by engineering teams at Glide, Metabase, TableCheck, and Pantheon. Endorsed by maintainers of React and Next.js.
+
+Mission: To make the invisible visible, so the engineers building tomorrow's web applications can move forward with clarity and confidence, without leaving their hardest problems unsolved.
