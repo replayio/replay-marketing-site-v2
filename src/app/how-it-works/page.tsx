@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Footer from "@/components/Footer";
 import Nav from "@/components/Nav";
+import TwoWaysToConnect from "@/components/TwoWaysToConnect";
 import WarpSpeedBg from "@/components/WarpSpeedBg";
 
 import brokenButtonGif from "@/images/mcp/brokenButton.gif";
@@ -199,54 +200,7 @@ export default function HowItWorksPage() {
       </section>
 
       {/* Two Ways to Connect */}
-      <div className="bg-surface-tinted">
-        <section className="px-6 py-24 max-w-3xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-2">
-            Works where you already work.
-          </h2>
-          <p className="text-muted text-center mb-10">
-            Same recording engine. Two ways to connect.
-          </p>
-          <div className="grid sm:grid-cols-2 gap-6">
-            <div className="rounded-xl border border-border bg-surface p-6">
-              <p className="text-xs font-medium uppercase tracking-widest text-brand-purple mb-3">
-                From your IDE
-              </p>
-              <div className="rounded-lg bg-surface-tinted font-mono text-sm px-4 py-3 mb-4 select-all">
-                npx replay-mcp install
-              </div>
-              <p className="text-sm text-muted leading-relaxed mb-4">
-                Connects to Cursor, Claude Code, Copilot, and Windsurf. Your
-                agent gets root cause and a specific fix automatically.
-              </p>
-              <a
-                href="https://docs.replay.io/basics/replay-mcp/overview"
-                className="text-sm font-medium text-brand-purple hover:opacity-80 transition"
-              >
-                Read the docs &rarr;
-              </a>
-            </div>
-            <div className="rounded-xl border border-border bg-surface p-6">
-              <p className="text-xs font-medium uppercase tracking-widest text-brand-pink mb-3">
-                From Chrome
-              </p>
-              <div className="rounded-lg bg-surface-tinted text-sm px-4 py-3 mb-4 text-muted">
-                Replay Chrome Extension
-              </div>
-              <p className="text-sm text-muted leading-relaxed mb-4">
-                Record a bug in your browser, get a plain-English fix to paste
-                into your AI tool. No setup required.
-              </p>
-              <a
-                href="#"
-                className="text-sm font-medium text-brand-pink hover:opacity-80 transition"
-              >
-                Install for Chrome &rarr;
-              </a>
-            </div>
-          </div>
-        </section>
-      </div>
+      <TwoWaysToConnect />
 
       {/* Social Proof */}
       <section className="px-6 py-24 max-w-5xl mx-auto">
