@@ -9,7 +9,7 @@ import ThemeToggle from "@/components/ThemeToggle";
 const links = [
   { href: "/how-it-works", label: "How it Works" },
   { href: "/pricing", label: "Pricing" },
-  { href: "https://docs.replay.io", label: "Docs" },
+  { href: "https://docs.replay.io/basics/replay-mcp/overview", label: "Docs" },
 ];
 
 export default function Nav() {

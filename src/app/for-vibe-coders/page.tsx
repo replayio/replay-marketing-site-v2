@@ -189,35 +189,6 @@ export default function ForVibeCodersPage() {
         </div>
       </section>
 
-      {/* Early Access */}
-      <section className="px-6 py-24 max-w-3xl mx-auto">
-        <h2 className="text-3xl font-bold mb-6">
-          We&apos;re building this for you &mdash;{" "}
-          <span className="text-brand-pink">and we&apos;d love your help.</span>
-        </h2>
-        <div className="space-y-6 text-muted text-lg leading-relaxed">
-          <p>
-            Replay has been used by engineering teams for a while. We&apos;re
-            now building specifically for people who build with AI tools but
-            aren&apos;t professional developers. That means we&apos;re actively
-            learning what works and what doesn&apos;t.
-          </p>
-          <p>
-            If you try Replay and have thoughts &mdash; what&apos;s confusing,
-            what&apos;s missing, what&apos;s great &mdash; we genuinely want to
-            hear from you.
-          </p>
-        </div>
-        <div className="mt-8">
-          <a
-            href="/feedback"
-            className="rounded-full border border-border px-7 py-3.5 text-base font-medium text-muted hover:border-foreground/20 hover:text-foreground transition"
-          >
-            Share feedback &rarr;
-          </a>
-        </div>
-      </section>
-
       {/* Final CTA */}
       <div className="bg-surface-tinted">
         <section className="px-6 py-24 max-w-3xl mx-auto text-center">
@@ -227,20 +198,8 @@ export default function ForVibeCodersPage() {
           <p className="text-muted max-w-xl mx-auto mb-8 text-lg">
             Install the Chrome extension and see what Replay finds.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="#"
-              className="rounded-full px-8 py-3.5 text-base font-medium text-white hover:opacity-90 transition"
-              style={{ background: "var(--brand-gradient)" }}
-            >
-              Install Replay for Chrome
-            </a>
-            <a
-              href="mailto:support@replay.io"
-              className="rounded-full border border-border px-8 py-3.5 text-base font-medium text-muted hover:border-foreground/20 hover:text-foreground transition"
-            >
-              Have a question? Get in touch &rarr;
-            </a>
+          <div className="flex justify-center">
+            <NotifyForm />
           </div>
         </section>
       </div>

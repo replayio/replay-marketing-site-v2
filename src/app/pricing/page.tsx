@@ -184,6 +184,9 @@ export default function PricingPage() {
                 <path d="M7 1.5C5 3 4 5 4 7s1 4 3 5.5M7 1.5C9 3 10 5 10 7s-1 4-3 5.5M1.5 7h11" />
               </svg>
               Chrome extension
+              <span className="text-[9px] font-semibold uppercase tracking-wider text-brand-pink leading-none">
+                Coming soon
+              </span>
             </span>
           </div>
           <p className="text-xs text-muted">
@@ -193,60 +196,12 @@ export default function PricingPage() {
         </div>
       </section>
 
-      {/* Design Partner CTA */}
-      <div className="bg-surface-tinted" id="partner">
+      {/* Pricing tiers + Design Partner overlay */}
+      <div className="relative bg-surface-tinted" id="partner">
+        {/* Pricing tiers — blurred behind the overlay */}
         <section className="px-6 py-20 max-w-5xl mx-auto">
-          <div className="relative rounded-xl border border-border bg-surface p-10 md:p-14 overflow-hidden">
-            {/* Glow */}
-            <div
-              className="pointer-events-none absolute -right-20 top-1/2 -translate-y-1/2 w-[400px] h-[400px]"
-              style={{
-                background:
-                  "radial-gradient(circle, rgba(240,45,94,0.07) 0%, transparent 70%)",
-              }}
-            />
-
-            <div className="relative z-10 flex flex-col md:flex-row md:items-center md:justify-between gap-8">
-              <div className="max-w-lg">
-                <p className="text-[11px] font-semibold uppercase tracking-[0.1em] text-brand-pink mb-3">
-                  Early access &middot; Design partners
-                </p>
-                <h2 className="text-2xl sm:text-3xl font-bold tracking-tight mb-3 leading-snug">
-                  Shape what Replay becomes
-                </h2>
-                <p className="text-sm text-muted leading-relaxed">
-                  We&apos;re working with a small group of engineering teams to
-                  build and refine Replay MCP. Design partners get free access
-                  during the program and favorable pricing when they convert
-                  &mdash; in exchange for real usage and regular feedback. If
-                  your team ships a React or Next.js app and hard bugs are
-                  costing you hours, we&apos;d like to talk.
-                </p>
-              </div>
-              <div className="flex flex-row md:flex-col gap-3 flex-shrink-0">
-                <a
-                  href="mailto:partners@replay.io"
-                  className="rounded-full px-6 py-3 text-sm font-medium text-white text-center transition hover:opacity-90"
-                  style={{ background: "var(--brand-gradient)" }}
-                >
-                  Apply to partner
-                </a>
-                <a
-                  href="mailto:pricing@replay.io"
-                  className="rounded-full border border-border px-6 py-3 text-sm font-medium text-muted text-center transition hover:border-foreground/20 hover:text-foreground"
-                >
-                  Discuss pricing
-                </a>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-
-      {/* Pricing tiers */}
-      <section className="px-6 pb-20 max-w-5xl mx-auto">
-        <div className="grid md:grid-cols-3 gap-5">
-          {tiers.map((tier) => (
+          <div className="grid md:grid-cols-3 gap-5 blur-[2px] opacity-50 pointer-events-none select-none">
+            {tiers.map((tier) => (
             <div
               key={tier.label}
               className={`relative flex flex-col rounded-xl border p-7 transition-all ${
@@ -342,9 +297,60 @@ export default function PricingPage() {
                 {tier.cta}
               </a>
             </div>
-          ))}
+            ))}
+          </div>
+        </section>
+
+        {/* Design Partner CTA — floating overlay */}
+        <div className="absolute inset-0 z-10 flex items-center justify-center px-6">
+          <div className="w-full max-w-5xl">
+            <div className="relative rounded-xl border border-border bg-surface p-10 md:p-14 overflow-hidden shadow-xl">
+              {/* Glow */}
+              <div
+                className="pointer-events-none absolute -right-20 top-1/2 -translate-y-1/2 w-[400px] h-[400px]"
+                style={{
+                  background:
+                    "radial-gradient(circle, rgba(240,45,94,0.07) 0%, transparent 70%)",
+                }}
+              />
+
+              <div className="relative z-10 flex flex-col md:flex-row md:items-center md:justify-between gap-8">
+                <div className="max-w-lg">
+                  <p className="text-[11px] font-semibold uppercase tracking-[0.1em] text-brand-pink mb-3">
+                    Early access &middot; Design partners
+                  </p>
+                  <h2 className="text-2xl sm:text-3xl font-bold tracking-tight mb-3 leading-snug">
+                    Shape what Replay becomes
+                  </h2>
+                  <p className="text-sm text-muted leading-relaxed">
+                    We&apos;re working with a small group of engineering teams to
+                    build and refine Replay MCP. Design partners get free access
+                    during the program and favorable pricing when they convert
+                    &mdash; in exchange for real usage and regular feedback. If
+                    your team ships a React or Next.js app and hard bugs are
+                    costing you hours, we&apos;d like to talk.
+                  </p>
+                </div>
+                <div className="flex flex-row md:flex-col gap-3 flex-shrink-0">
+                  <a
+                    href="mailto:partners@replay.io"
+                    className="rounded-full px-6 py-3 text-sm font-medium text-white text-center transition hover:opacity-90"
+                    style={{ background: "var(--brand-gradient)" }}
+                  >
+                    Apply to partner
+                  </a>
+                  <a
+                    href="mailto:pricing@replay.io"
+                    className="rounded-full border border-border px-6 py-3 text-sm font-medium text-muted text-center transition hover:border-foreground/20 hover:text-foreground"
+                  >
+                    Discuss pricing
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-      </section>
+      </div>
 
       {/* FAQ */}
       <section className="px-6 py-20 max-w-3xl mx-auto">
