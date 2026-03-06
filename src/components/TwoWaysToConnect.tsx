@@ -15,7 +15,7 @@ export default function TwoWaysToConnect() {
         <div className="grid sm:grid-cols-2 gap-8">
           <div className="rounded-xl border border-border bg-surface p-8 flex flex-col">
             <p className="text-xs font-medium uppercase tracking-widest text-brand-purple mb-4">
-              From your IDE
+              Replay MCP
             </p>
             <div className="rounded-lg border border-border bg-surface-tinted overflow-hidden mb-6">
               <Image
@@ -26,8 +26,9 @@ export default function TwoWaysToConnect() {
               />
             </div>
             <p className="text-base text-muted leading-relaxed mb-6">
-              Connects to Cursor, Claude Code, Copilot, and Windsurf. Your
-              agent gets root cause and a specific fix automatically.
+              Install Replay MCP in one command and connect it to Cursor,
+              Claude Code, Copilot, or Windsurf. Your agent gets root cause
+              and a specific fix automatically.
             </p>
             <a
               href="https://docs.replay.io/basics/replay-mcp/overview"
@@ -38,7 +39,7 @@ export default function TwoWaysToConnect() {
           </div>
           <div className="rounded-xl border border-border bg-surface p-8 flex flex-col">
             <p className="text-xs font-medium uppercase tracking-widest text-brand-pink mb-4">
-              From Chrome
+              Replay Chrome Extension
             </p>
             <div className="rounded-lg border border-border bg-surface-tinted overflow-hidden mb-6">
               <Image

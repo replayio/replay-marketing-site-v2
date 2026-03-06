@@ -80,7 +80,7 @@ export default function Home() {
             className="inline-block rounded-full px-8 py-3.5 text-base font-medium text-white hover:opacity-90 transition"
             style={{ background: "var(--brand-gradient)" }}
           >
-            Get started free
+            Add Replay to your agent &rarr;
           </a>
         </section>
 
