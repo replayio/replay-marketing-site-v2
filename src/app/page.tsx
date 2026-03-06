@@ -526,12 +526,6 @@ export default function Home() {
           >
             Get started free
           </a>
-          <a
-            href="#"
-            className="text-sm font-medium text-muted hover:text-foreground transition"
-          >
-            Or install the Chrome extension &rarr;
-          </a>
         </div>
       </section>
 
