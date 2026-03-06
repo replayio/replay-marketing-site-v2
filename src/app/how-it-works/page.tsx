@@ -60,11 +60,11 @@ export default function HowItWorksPage() {
             &mdash; not guess at them.
           </p>
           <a
-            href="https://docs.replay.io/basics/replay-mcp/overview"
+            href="https://docs.replay.io/basics/replay-mcp/quickstart"
             className="rounded-full px-7 py-3.5 text-base font-medium text-white hover:opacity-90 transition"
             style={{ background: "var(--brand-gradient)" }}
           >
-            Try Replay Free &rarr;
+            Add Replay to your agent
           </a>
         </section>
       </div>
@@ -293,11 +293,11 @@ export default function HowItWorksPage() {
             Free to get started. No credit card required.
           </p>
           <a
-            href="https://docs.replay.io/basics/replay-mcp/overview"
+            href="https://docs.replay.io/basics/replay-mcp/quickstart"
             className="inline-block rounded-full px-8 py-3.5 text-base font-medium text-white hover:opacity-90 transition"
             style={{ background: "var(--brand-gradient)" }}
           >
-            Try Replay Free &mdash; no credit card required
+            Add Replay to your agent
           </a>
         </section>
       </div>
