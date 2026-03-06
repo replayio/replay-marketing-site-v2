@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import Footer from "@/components/Footer";
+import HeroFormula from "@/components/HeroFormula";
 import Nav from "@/components/Nav";
-import CyclingTool from "./CyclingTool";
+import WarpSpeedBg from "@/components/WarpSpeedBg";
+import NotifyForm from "./NotifyForm";
 
 export const metadata: Metadata = {
   title: "Replay for Vibe Coders",
@@ -21,25 +23,44 @@ export default function ForVibeCodersPage() {
       <Nav />
 
       {/* Hero */}
-      <section className="hero-fade-in px-6 pt-24 pb-20 max-w-3xl mx-auto text-center">
-        <h1 className="text-4xl sm:text-5xl font-bold leading-[1.1] tracking-tight mb-6">
-          You built something with <CyclingTool />.
-          <br />
-          It was working.{" "}
-          <span className="text-brand-pink">Now it&apos;s not.</span>
-        </h1>
-        <p className="text-lg text-muted max-w-2xl mx-auto mb-10 leading-relaxed">
-          Replay Extension shows you exactly what went wrong &mdash; in plain
-          English &mdash; so you can fix it.
-        </p>
-        <a
-          href="#"
-          className="inline-block rounded-full px-7 py-3.5 text-base font-medium text-white hover:opacity-90 transition"
-          style={{ background: "var(--brand-gradient)" }}
-        >
-          Install Replay for Chrome &mdash; it&apos;s free
-        </a>
-      </section>
+      <div className="relative overflow-hidden">
+        <WarpSpeedBg
+          className="absolute inset-0 opacity-30 dark:opacity-40"
+          config={{
+            speed: 10,
+            targetSpeed: 10,
+            speedAdjFactor: 0.8,
+            density: 0.7,
+            starSize: 2,
+            warpEffect: true,
+            warpEffectLength: 5,
+            depthFade: true,
+            shape: "square",
+            backgroundColor: "#FFFFFF",
+            starColor: "hsl(263,45%,7%)",
+          }}
+          darkConfig={{
+            backgroundColor: "hsl(263,45%,7%)",
+            starColor: "#FFFFFF",
+          }}
+        />
+        <section className="hero-fade-in relative z-10 flex flex-col items-center text-center px-6 pt-24 pb-20 max-w-4xl mx-auto">
+          <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-border bg-surface text-xs font-medium text-muted mb-8">
+            <span className="w-1.5 h-1.5 rounded-full bg-brand-pink" />
+            Coming Soon
+          </span>
+          <HeroFormula />
+          <h1 className="text-5xl sm:text-6xl font-bold leading-[1.1] tracking-tight mb-6">
+            Build fearlessly with the Replay Chrome extension.
+          </h1>
+          <p className="text-lg text-muted max-w-2xl mb-10 leading-relaxed">
+            The Replay Chrome extension is like having a senior engineer
+            watching over your shoulder, catching bugs, finding root causes, and
+            telling the AI exactly how to fix them.
+          </p>
+          <NotifyForm />
+        </section>
+      </div>
 
       {/* Meet Them Where They Are */}
       <div className="bg-surface-tinted">
