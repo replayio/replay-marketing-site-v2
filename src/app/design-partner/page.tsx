@@ -149,16 +149,25 @@ export default function DesignPartnerPage() {
           <h2 className="text-3xl font-bold mb-6">Who this is for</h2>
           <div className="space-y-4 text-muted text-lg leading-relaxed">
             <p>
-              We&apos;re looking for engineers and teams who are already using
-              AI coding agents — Cursor, Claude Code, Copilot, Windsurf — and
-              running into the wall where the agent gets stuck on a bug it
-              can&apos;t reason about without runtime context.
+              Replay MCP is purpose-built for debugging React-based web apps.
+              If your team has meaningful surface area in React —
+              a product, a platform, an internal tool — and you&apos;re using
+              AI coding agents like Cursor, Claude Code, Copilot, or Windsurf
+              to build and fix it, this program is designed for you.
             </p>
             <p>
-              It doesn&apos;t matter what you&apos;re building. What matters
-              is that you care about making the debugging loop faster, and
-              you&apos;re willing to tell us honestly when something
-              doesn&apos;t work the way it should.
+              If your stack is primarily mobile, backend, or outside the React
+              ecosystem,{" "}
+              <span className="text-foreground font-medium">
+                Replay MCP probably isn&apos;t the right fit yet.
+              </span>{" "}
+              We&apos;d rather be honest about that upfront than waste your
+              time.
+            </p>
+            <p>
+              What matters beyond the stack: you care about making the
+              debugging loop faster, and you&apos;re willing to tell us
+              honestly when something doesn&apos;t work the way it should.
             </p>
           </div>
         </section>
