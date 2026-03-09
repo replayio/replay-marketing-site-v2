@@ -7,7 +7,6 @@ import Link from "next/link";
 import ThemeToggle from "@/components/ThemeToggle";
 
 const links = [
-  { href: "/", label: "Overview" },
   { href: "/how-it-works", label: "How it Works" },
   { href: "/for-engineers", label: "For engineers" },
   { href: "/for-vibe-coders", label: "For vibecoders" },
