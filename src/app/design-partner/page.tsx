@@ -71,9 +71,9 @@ export default function DesignPartnerPage() {
             Design Partner Program
           </div>
           <h1 className="text-4xl sm:text-5xl font-bold leading-[1.1] tracking-tight mb-6">
-            Help us build the debugging tool{" "}
+            Help us build the perfect debugger{" "}
             <span className="text-brand-pink">
-              your agent actually needs.
+              for your coding agent.
             </span>
           </h1>
           <p className="text-lg text-muted max-w-2xl mb-6 leading-relaxed">
