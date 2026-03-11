@@ -7,12 +7,12 @@ import WarpSpeedBg from "@/components/WarpSpeedBg";
 export const metadata: Metadata = {
   title: "Replay for Engineers",
   description:
-    "Replay MCP gives your coding agent the runtime context it needs to fix bugs — not loop on them. One command to install.",
+    "Monitoring tells you a bug happened. Replay shows your agent exactly why — deterministic runtime recording, React internals, JS execution. Not logs. The execution itself.",
   alternates: { canonical: "/for-engineers" },
   openGraph: {
     title: "Replay for Engineers",
     description:
-      "Replay MCP gives your coding agent the runtime context it needs to fix bugs — not loop on them.",
+      "Monitoring tells you a bug happened. Replay shows your agent exactly why.",
   },
 };
 
@@ -45,14 +45,15 @@ export default function ForEngineersPage() {
         />
         <section className="hero-fade-in relative z-10 flex flex-col items-center text-center px-6 pt-24 pb-16 max-w-4xl mx-auto">
           <h1 className="text-4xl sm:text-5xl font-bold leading-[1.1] tracking-tight mb-6">
-            You gave your agent a ticket. It shipped a guess.{" "}
+            Monitoring tells you a bug happened.{" "}
             <span className="text-brand-pink">
-              You spent the next hour in DevTools.
+              Replay shows your agent exactly why.
             </span>
           </h1>
           <p className="text-lg text-muted max-w-2xl mb-10 leading-relaxed">
-            Replay MCP gives your coding agent the runtime context it needs to
-            fix bugs &mdash; not loop on them.
+            Replay MCP gives your coding agent a deterministic recording of your
+            app&rsquo;s runtime &mdash; React renders, JS execution, network
+            calls, DOM state. Not logs. The execution itself.
           </p>
 
           <a
@@ -65,143 +66,181 @@ export default function ForEngineersPage() {
         </section>
       </div>
 
-      {/* The Problem */}
+      {/* Monitoring Reframe */}
       <div className="bg-surface-tinted">
         <section className="px-6 py-24 max-w-3xl mx-auto">
           <h2 className="text-3xl sm:text-4xl font-bold mb-6 leading-tight">
-            The problem isn&apos;t your agent.{" "}
+            Your stack has logs, traces, and alerts.{" "}
             <span className="text-brand-pink">
-              It&apos;s what your agent can&apos;t see.
+              Your agent still can&apos;t debug.
             </span>
           </h2>
           <div className="space-y-6 text-muted text-lg leading-relaxed">
             <p>
-              Coding agents are genuinely good at writing code. But they have no
-              runtime visibility. They can read your codebase &mdash; they
-              can&apos;t see what happened in the browser when something broke.
+              Datadog, Honeycomb, and LogRocket are good at what they do:
+              surface anomalies, trace requests, alert when error rates spike.
+              But when your agent gets a bug ticket, none of that tells it{" "}
+              <em>why</em> the React selector returned stale data, or which
+              render cascade triggered the race condition, or what state
+              mutation fired the wrong handler.
             </p>
             <p>
-              No DOM state. No network timing. No component re-renders. Without
-              that context, an agent can only guess.{" "}
+              That analysis requires the actual execution &mdash; not a
+              sampled, aggregated representation of it.{" "}
               <span className="text-foreground font-medium">
-                Replay solves the context problem.
+                Monitoring is a signal. Replay is the recording.
               </span>
             </p>
           </div>
         </section>
       </div>
 
-      {/* What Replay MCP Delivers */}
+      {/* Depth Section */}
       <section className="px-6 py-24 max-w-5xl mx-auto">
         <h2 className="text-3xl font-bold text-center mb-4">
-          Your agent gets context, not guesses.
+          The analysis monitoring can&apos;t give you.
         </h2>
         <p className="text-muted text-center max-w-2xl mx-auto mb-16">
-          Three things Replay MCP delivers to your agent on every bug.
+          Three classes of bugs that require seeing the actual execution &mdash;
+          not a trace.
         </p>
 
         <div className="grid md:grid-cols-3 gap-8">
           <div className="rounded-xl border border-border bg-surface p-8">
             <h3 className="text-lg font-semibold mb-3">
-              Root cause, not a guess
+              Render-to-cause chains
             </h3>
             <p className="text-sm text-muted leading-relaxed mb-4">
-              Your agent gets a precise diagnosis &mdash; the exact state
-              change, failed request, or bad render that caused the bug, and
-              why.
+              Why did this component re-render? Trace it backwards through the
+              dependency graph to the exact state mutation that triggered it.
+              Not a guess &mdash; the actual render tree at the moment it
+              happened.
             </p>
             <div className="rounded-lg bg-surface-tinted p-4 text-xs text-muted italic leading-relaxed">
-              &ldquo;The form submission fails because the onSubmit handler
-              fires before the async validation resolves. The race condition is
-              in FormContainer.tsx line 47.&rdquo;
+              &ldquo;CartSummary re-rendered 14 times on a single click. Root
+              cause: useCartState returned a new object reference on every call.
+              The selector was never memoized.&rdquo;
             </div>
           </div>
 
           <div className="rounded-xl border border-border bg-surface p-8">
             <h3 className="text-lg font-semibold mb-3">
-              An implementation-ready fix
+              Selector reference tracking
             </h3>
             <p className="text-sm text-muted leading-relaxed mb-4">
-              Not vague suggestions. The specific file, function, and change
-              &mdash; ready for your agent to apply.
+              Which selector read stale data? When did it change? Replay tracks
+              every reference so your agent can answer these questions without
+              adding a single log line to your codebase.
             </p>
             <div className="rounded-lg bg-surface-tinted p-4 text-xs text-muted italic leading-relaxed">
-              &ldquo;Wrap the handleSubmit call in FormContainer.tsx with await
-              validateForm() before proceeding to submission logic.&rdquo;
+              &ldquo;selectUserPermissions returned the pre-login value at
+              t+340ms. The auth slice updated at t+280ms but the selector cache
+              wasn&apos;t invalidated.&rdquo;
             </div>
           </div>
 
           <div className="rounded-xl border border-border bg-surface p-8">
             <h3 className="text-lg font-semibold mb-3">
-              Works in your existing workflow
+              JS execution, frame by frame
             </h3>
             <p className="text-sm text-muted leading-relaxed mb-4">
-              Connects to Cursor, Claude Code, Copilot, and Windsurf. Integrates
-              with Playwright, Cypress, and Selenium. Runs in CI. Nothing to rip
-              out.
+              Step through any JavaScript frame in order. Add console.logs
+              retroactively. Set breakpoints that didn&apos;t exist when the
+              bug happened. This is impossible with logs &mdash; it requires the
+              recording.
             </p>
-            <div className="flex flex-wrap gap-2 mt-2">
-              {[
-                { name: "Claude Code", logo: "/logos/claude.svg" },
-                { name: "Cursor", logo: "/logos/cursor.svg" },
-                { name: "Copilot", logo: "/logos/copilot.svg" },
-                { name: "Windsurf", logo: "/logos/windsurf.svg" },
-              ].map((item) => (
-                <span
-                  key={item.name}
-                  className="rounded-full border border-brand-purple/30 bg-brand-purple/5 px-3 py-1 text-xs inline-flex items-center gap-1.5"
-                >
-                  <Image
-                    src={item.logo}
-                    alt={item.name}
-                    width={14}
-                    height={14}
-                    className="w-3.5 h-3.5 dark:invert"
-                  />
-                  {item.name}
-                </span>
-              ))}
+            <div className="rounded-lg bg-surface-tinted p-4 text-xs text-muted italic leading-relaxed">
+              &ldquo;The race condition is in PaymentFlow.tsx line 83. The
+              onSubmit handler fires before the async validation resolves.
+              Here&apos;s the fix.&rdquo;
             </div>
           </div>
         </div>
       </section>
 
       {/* Use Cases */}
-      <section className="px-6 py-24 max-w-5xl mx-auto">
-        <h2 className="text-3xl font-bold text-center mb-4">
-          Built for the bugs that cost you the most time.
-        </h2>
-        <p className="text-muted text-center max-w-2xl mx-auto mb-16">
-          Three scenarios where Replay pays for itself immediately.
-        </p>
-        <div className="grid md:grid-cols-3 gap-8">
-          {[
-            {
-              title: "Failing tests in CI",
-              description:
-                "Your test suite has a flake that fails one in ten runs and nobody can reproduce it locally. Replay records every CI run. When it flakes, Replay MCP analyzes the recording and delivers the root cause to your agent \u2014 no manual investigation.",
-            },
-            {
-              title: "User-reported bugs you can\u2019t reproduce",
-              description:
-                "A user reports something broken. You can\u2019t reproduce it locally. Replay captures the user\u2019s session, analyzes it, and surfaces the exact conditions that caused the failure.",
-            },
-            {
-              title: "Agents stuck in a loop",
-              description:
-                "Your agent keeps retrying the same patch against the same failing test. Replay gives it the runtime context to break the loop \u2014 and ship the actual fix.",
-            },
-          ].map((uc) => (
-            <div
-              key={uc.title}
-              className="rounded-xl border border-border bg-surface p-8"
-            >
-              <h3 className="text-lg font-semibold mb-2">{uc.title}</h3>
-              <p className="text-sm text-muted leading-relaxed">
-                {uc.description}
-              </p>
-            </div>
-          ))}
+      <div className="bg-surface-tinted">
+        <section className="px-6 py-24 max-w-5xl mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-4">
+            Built for the bugs monitoring can&apos;t explain.
+          </h2>
+          <p className="text-muted text-center max-w-2xl mx-auto mb-16">
+            Three scenarios where logs and traces run out &mdash; and Replay
+            picks up.
+          </p>
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              {
+                title: "Flaky tests in CI",
+                description:
+                  "Your test suite has a flake that fails one in ten runs. Nobody can reproduce it locally, and the logs tell you what failed \u2014 not why. Replay records every CI run. When it flakes, Replay MCP delivers the root cause to your agent directly from the recording.",
+              },
+              {
+                title: "User-reported bugs you can\u2019t reproduce",
+                description:
+                  "A user reports something broken. You try to reproduce it. You can\u2019t. Replay captures the user\u2019s actual session and surfaces the exact conditions \u2014 state, timing, render sequence \u2014 that caused the failure. Your agent gets the recording, not a description of it.",
+              },
+              {
+                title: "Agents stuck in a loop",
+                description:
+                  "Your agent keeps patching the same failing test. Feeding it more logs doesn\u2019t break the loop \u2014 the logs don\u2019t contain what it needs. Replay gives it the runtime execution. That\u2019s what breaks the loop.",
+              },
+            ].map((uc) => (
+              <div
+                key={uc.title}
+                className="rounded-xl border border-border bg-surface p-8"
+              >
+                <h3 className="text-lg font-semibold mb-2">{uc.title}</h3>
+                <p className="text-sm text-muted leading-relaxed">
+                  {uc.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </section>
+      </div>
+
+      {/* Works in your workflow */}
+      <section className="px-6 py-24 max-w-3xl mx-auto">
+        <div className="rounded-xl border border-brand-purple/20 bg-brand-purple/5 p-8">
+          <p className="text-xs font-medium uppercase tracking-widest text-brand-purple mb-3">
+            One command to install
+          </p>
+          <h3 className="text-xl font-semibold mb-3">
+            Connects to the agent you already use.
+          </h3>
+          <p className="text-base text-muted leading-relaxed mb-4">
+            Cursor, Claude Code, Copilot, Windsurf. Playwright, Cypress,
+            Selenium. CI or local. Nothing to rip out.
+          </p>
+          <div className="flex flex-wrap gap-2 mb-6">
+            {[
+              { name: "Claude Code", logo: "/logos/claude.svg" },
+              { name: "Cursor", logo: "/logos/cursor.svg" },
+              { name: "Copilot", logo: "/logos/copilot.svg" },
+              { name: "Windsurf", logo: "/logos/windsurf.svg" },
+            ].map((item) => (
+              <span
+                key={item.name}
+                className="rounded-full border border-brand-purple/30 bg-brand-purple/5 px-3 py-1 text-xs inline-flex items-center gap-1.5"
+              >
+                <Image
+                  src={item.logo}
+                  alt={item.name}
+                  width={14}
+                  height={14}
+                  className="w-3.5 h-3.5 dark:invert"
+                />
+                {item.name}
+              </span>
+            ))}
+          </div>
+          <a
+            href="https://docs.replay.io/basics/replay-mcp/quickstart"
+            className="inline-block text-sm font-medium text-brand-purple hover:opacity-80 transition"
+          >
+            See the quickstart &rarr;
+          </a>
         </div>
       </section>
 
@@ -289,15 +328,15 @@ export default function ForEngineersPage() {
       {/* Final CTA */}
       <section className="px-6 py-24 max-w-3xl mx-auto text-center">
         <h2 className="text-3xl sm:text-4xl font-bold mb-4 leading-tight">
-          Stop debugging for your agent.
+          Stop feeding your agent logs.
           <br />
-          Let Replay do it.
+          Give it the execution.
         </h2>
         <p className="text-muted max-w-xl mx-auto mb-8 text-lg">
           Free to get started. No credit card required.
         </p>
         <a
-          href="#"
+          href="https://docs.replay.io/basics/replay-mcp/quickstart"
           className="inline-block rounded-full px-8 py-3.5 text-base font-medium text-white hover:opacity-90 transition"
           style={{ background: "var(--brand-gradient)" }}
         >
