@@ -45,9 +45,9 @@ export default function ForEngineersPage() {
         />
         <section className="hero-fade-in relative z-10 flex flex-col items-center text-center px-6 pt-24 pb-16 max-w-4xl mx-auto">
           <h1 className="text-4xl sm:text-5xl font-bold leading-[1.1] tracking-tight mb-6">
-            Monitoring tells you a bug happened.{" "}
+            Monitoring is a signal.{" "}
             <span className="text-brand-pink">
-              Replay shows your agent exactly why.
+              Replay is the recording.
             </span>
           </h1>
           <p className="text-lg text-muted max-w-2xl mb-10 leading-relaxed">
@@ -88,7 +88,7 @@ export default function ForEngineersPage() {
               That analysis requires the actual execution &mdash; not a
               sampled, aggregated representation of it.{" "}
               <span className="text-foreground font-medium">
-                Monitoring is a signal. Replay is the recording.
+                One tells you something happened. The other shows you everything that did.
               </span>
             </p>
           </div>
@@ -98,11 +98,11 @@ export default function ForEngineersPage() {
       {/* Depth Section */}
       <section className="px-6 py-24 max-w-5xl mx-auto">
         <h2 className="text-3xl font-bold text-center mb-4">
-          The analysis monitoring can&apos;t give you.
+          The analysis that used to take a staff engineer.
         </h2>
         <p className="text-muted text-center max-w-2xl mx-auto mb-16">
           Three classes of bugs that require seeing the actual execution &mdash;
-          not a trace.
+          not a trace. Now deliverable by your agent.
         </p>
 
         <div className="grid md:grid-cols-3 gap-8">
@@ -171,6 +171,11 @@ export default function ForEngineersPage() {
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
+                title: "Agents stuck in a loop",
+                description:
+                  "Your agent keeps patching the same failing test. Feeding it more logs doesn\u2019t break the loop \u2014 the logs don\u2019t contain what it needs. Replay gives it the runtime execution. That\u2019s what breaks the loop.",
+              },
+              {
                 title: "Flaky tests in CI",
                 description:
                   "Your test suite has a flake that fails one in ten runs. Nobody can reproduce it locally, and the logs tell you what failed \u2014 not why. Replay records every CI run. When it flakes, Replay MCP delivers the root cause to your agent directly from the recording.",
@@ -178,12 +183,7 @@ export default function ForEngineersPage() {
               {
                 title: "User-reported bugs you can\u2019t reproduce",
                 description:
-                  "A user reports something broken. You try to reproduce it. You can\u2019t. Replay captures the user\u2019s actual session and surfaces the exact conditions \u2014 state, timing, render sequence \u2014 that caused the failure. Your agent gets the recording, not a description of it.",
-              },
-              {
-                title: "Agents stuck in a loop",
-                description:
-                  "Your agent keeps patching the same failing test. Feeding it more logs doesn\u2019t break the loop \u2014 the logs don\u2019t contain what it needs. Replay gives it the runtime execution. That\u2019s what breaks the loop.",
+                  "A user reports something broken. You try to reproduce it. You can\u2019t. The Replay Chrome Extension captures the user\u2019s session as it happens \u2014 state, timing, render sequence \u2014 so your agent gets the recording, not a description of it.",
               },
             ].map((uc) => (
               <div
@@ -210,8 +210,13 @@ export default function ForEngineersPage() {
             Connects to the agent you already use.
           </h3>
           <p className="text-base text-muted leading-relaxed mb-4">
-            Cursor, Claude Code, Copilot, Windsurf. Playwright, Cypress,
-            Selenium. CI or local. Nothing to rip out.
+            Create recordings with the{" "}
+            <a href="https://docs.replay.io/basics/replay-chrome-extension/getting-started" className="text-brand-purple hover:opacity-80 transition font-medium">
+              Chrome Extension
+            </a>{" "}
+            or in CI with Playwright, Cypress, or Selenium. Then connect Replay
+            MCP to Cursor, Claude Code, Copilot, or Windsurf. Nothing to rip
+            out.
           </p>
           <div className="flex flex-wrap gap-2 mb-6">
             {[
