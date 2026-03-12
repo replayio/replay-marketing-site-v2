@@ -56,13 +56,21 @@ export default function ForEngineersPage() {
             calls, DOM state. Not logs. The execution itself.
           </p>
 
-          <a
-            href="https://docs.replay.io/basics/replay-mcp/quickstart"
-            className="inline-block rounded-full px-7 py-3.5 text-base font-medium text-white hover:opacity-90 transition"
-            style={{ background: "var(--brand-gradient)" }}
-          >
-            Add Replay MCP to your agent
-          </a>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a
+              href="https://docs.replay.io/basics/replay-chrome-extension/getting-started"
+              className="inline-block rounded-full px-7 py-3.5 text-base font-medium text-white hover:opacity-90 transition"
+              style={{ background: "var(--brand-gradient)" }}
+            >
+              Install the Chrome Extension
+            </a>
+            <a
+              href="https://docs.replay.io/basics/replay-mcp/quickstart"
+              className="inline-block rounded-full px-7 py-3.5 text-base font-medium border border-border hover:bg-surface transition"
+            >
+              Set up Replay MCP
+            </a>
+          </div>
         </section>
       </div>
 
@@ -204,19 +212,25 @@ export default function ForEngineersPage() {
       <section className="px-6 py-24 max-w-3xl mx-auto">
         <div className="rounded-xl border border-brand-purple/20 bg-brand-purple/5 p-8">
           <p className="text-xs font-medium uppercase tracking-widest text-brand-purple mb-3">
-            One command to install
+            Getting started
           </p>
           <h3 className="text-xl font-semibold mb-3">
-            Connects to the agent you already use.
+            The Chrome Extension is the fastest way in.
           </h3>
           <p className="text-base text-muted leading-relaxed mb-4">
-            Create recordings with the{" "}
+            Install the{" "}
             <a href="https://docs.replay.io/basics/replay-chrome-extension/getting-started" className="text-brand-purple hover:opacity-80 transition font-medium">
-              Chrome Extension
-            </a>{" "}
-            or in CI with Playwright, Cypress, or Selenium. Then connect Replay
-            MCP to Cursor, Claude Code, Copilot, or Windsurf. Nothing to rip
-            out.
+              Replay Chrome Extension
+            </a>
+            , open your app, hit Record, reproduce the bug. That&rsquo;s it
+            &mdash; you have a recording your agent can analyze. No CI setup, no
+            config, no instrumentation.
+          </p>
+          <p className="text-base text-muted leading-relaxed mb-6">
+            Once you have recordings, connect Replay MCP to Cursor, Claude Code,
+            Copilot, or Windsurf. Your agent gets the full runtime &mdash;
+            React renders, JS execution, network calls &mdash; right inside your
+            IDE.
           </p>
           <div className="flex flex-wrap gap-2 mb-6">
             {[
@@ -240,12 +254,20 @@ export default function ForEngineersPage() {
               </span>
             ))}
           </div>
-          <a
-            href="https://docs.replay.io/basics/replay-mcp/quickstart"
-            className="inline-block text-sm font-medium text-brand-purple hover:opacity-80 transition"
-          >
-            See the quickstart &rarr;
-          </a>
+          <div className="flex flex-wrap gap-4">
+            <a
+              href="https://docs.replay.io/basics/replay-chrome-extension/getting-started"
+              className="inline-block text-sm font-medium text-brand-purple hover:opacity-80 transition"
+            >
+              Install the Chrome Extension &rarr;
+            </a>
+            <a
+              href="https://docs.replay.io/basics/replay-mcp/quickstart"
+              className="inline-block text-sm font-medium text-muted hover:text-foreground transition"
+            >
+              Set up Replay MCP &rarr;
+            </a>
+          </div>
         </div>
       </section>
 
@@ -340,13 +362,24 @@ export default function ForEngineersPage() {
         <p className="text-muted max-w-xl mx-auto mb-8 text-lg">
           Free to get started. No credit card required.
         </p>
-        <a
-          href="https://docs.replay.io/basics/replay-mcp/quickstart"
-          className="inline-block rounded-full px-8 py-3.5 text-base font-medium text-white hover:opacity-90 transition"
-          style={{ background: "var(--brand-gradient)" }}
-        >
-          Add Replay MCP to your agent
-        </a>
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a
+            href="https://docs.replay.io/basics/replay-chrome-extension/getting-started"
+            className="inline-block rounded-full px-8 py-3.5 text-base font-medium text-white hover:opacity-90 transition"
+            style={{ background: "var(--brand-gradient)" }}
+          >
+            Install the Chrome Extension
+          </a>
+          <a
+            href="https://docs.replay.io/basics/replay-mcp/quickstart"
+            className="inline-block rounded-full px-8 py-3.5 text-base font-medium border border-border hover:bg-surface transition"
+          >
+            Set up Replay MCP
+          </a>
+        </div>
+        <p className="text-xs text-muted mt-4">
+          New to Replay? Start with the extension &mdash; get your first recording in under a minute.
+        </p>
       </section>
 
       <Footer />
