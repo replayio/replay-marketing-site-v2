@@ -145,13 +145,9 @@ export default function Home() {
           the power of time-travel
         </h2>
         <p className="text-lg text-muted max-w-2xl mx-auto leading-relaxed mb-10">
-          Replay captures a deterministic recording of every test run — every DOM
-          change, network request, JS execution frame, and state update. When a
-          test fails, Replay's time-travel agent analyzes the recording, traces
-          the exact causal chain from failure to root cause, and delivers the
-          root cause and a suggested fix. No guessing. No manual debugging. No human required.
+          Replay captures a deterministic recording — every DOM change, network request, JS execution frame, and state update. Using Replay MCP, your coding agent can analyze the recording, trace the exact causal chain from failure to root cause, and deliver the root cause and a suggested fix. No guessing. No manual debugging. No human required.
         </p>
-        <div className="max-w-2xl mx-auto flex items-center gap-6 border border-border rounded-xl p-5">
+        <div className="max-w-2xl mx-auto flex flex-col sm:flex-row items-center gap-6 border border-border rounded-xl p-5">
           <div className="w-64 flex-shrink-0 aspect-video rounded-lg overflow-hidden">
             <iframe
               src="https://www.youtube.com/embed/Ew5Yc2Hni-8"
