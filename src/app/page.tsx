@@ -1,4 +1,5 @@
 import Image from "next/image";
+import desertBgStamps from "@/images/desert-bg-stamps.png";
 import FeatureTabs from "@/components/FeatureTabs";
 import BugToFixTabs from "@/components/BugToFixTabs";
 import TwoWaysToConnect from "@/components/TwoWaysToConnect";
@@ -348,35 +349,65 @@ export default function Home() {
         </section>
       </div>
 
-      {/* Proof point */}
-      <section className="px-6 py-20 max-w-4xl mx-auto">
-        <div className="rounded-xl border border-brand-purple/20 bg-brand-purple/5 p-8 md:p-12 text-center">
-          <p className="text-xs font-medium uppercase tracking-widest text-brand-purple mb-4">
-            Web Debug Bench — April 2026
-          </p>
-          <h2 className="text-3xl font-bold mb-4 leading-tight">
-            Replay MCP adds{" "}
-            <span className="text-brand-pink">15 percentage points</span>
-            <br />
-            to agent debugging accuracy
-          </h2>
-          <p className="text-muted max-w-2xl mx-auto text-lg leading-relaxed mb-6">
-            On 177 hard, realistic bugs in agent-built web apps: Claude Code +
-            Replay MCP scored <strong className="text-foreground">76%</strong>.
-            Claude Code alone scored 61%. Replay is the largest single
-            performance delta of any tested configuration — and the only one
-            capable of time-travel debugging.
-          </p>
-          <a
-            href="https://blog.replay.io/web-debug-bench"
-            className="text-sm font-medium text-brand-purple hover:opacity-80 transition"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read the benchmark blog post &rarr;
-          </a>
+      {/* Time Travelogue story cards */}
+      <div className="relative overflow-hidden">
+        <Image
+          src={desertBgStamps}
+          alt=""
+          fill
+          className="object-cover object-center opacity-10"
+          aria-hidden="true"
+        />
+      <section className="relative px-6 py-20 max-w-4xl mx-auto">
+        <p className="text-xs font-medium uppercase tracking-widest text-brand-pink mb-4 text-center">
+          Time Travelogues
+        </p>
+        <h2 className="text-3xl sm:text-4xl font-bold text-center mb-4 leading-tight">
+          Deep-dive time-travel sessions
+        </h2>
+        <p className="text-muted text-center text-base max-w-2xl mx-auto mb-10">
+          A running series of real debugging investigations — each one pitting Replay MCP against a bug that stumped a human expert.
+        </p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div className="rounded-xl border border-border bg-surface p-8 flex flex-col">
+            <p className="text-4xl font-bold text-brand-pink mb-3">7 min</p>
+            <h3 className="text-base font-semibold mb-3">
+              Replay MCP solved a React bug faster than Dan Abramov did
+            </h3>
+            <p className="text-sm text-muted leading-relaxed mb-6 flex-1">
+              Replay MCP agents traced a React 19 race condition to root cause in as little as 7 minutes. Dan had been manually debugging the same bug.
+            </p>
+            <a
+              href="https://www.replay.io/blog/replay-time-travelogue-how-replay-mcp-helped-find-a-react-bug-faster-than-dan-abramov-did"
+              className="text-sm font-medium text-brand-pink hover:opacity-80 transition mb-2"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Read the story &rarr;
+            </a>
+            <p className="text-xs text-muted">— Mark Erikson</p>
+          </div>
+          <div className="rounded-xl border border-border bg-surface p-8 flex flex-col">
+            <p className="text-4xl font-bold text-brand-pink mb-3">4–9 min</p>
+            <h3 className="text-base font-semibold mb-3">
+              The architectural fix Nadia spent days finding — solved automatically
+            </h3>
+            <p className="text-sm text-muted leading-relaxed mb-6 flex-1">
+              Given a Replay recording and skill docs, an AI agent recommended the exact server-side prefetching fix Nadia had eventually discovered through days of manual investigation.
+            </p>
+            <a
+              href="https://www.replay.io/blog/replay-time-travelogue-improving-nadias-debugging-with-ai-results-using-replay-mcp"
+              className="text-sm font-medium text-brand-pink hover:opacity-80 transition mb-2"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Read the story &rarr;
+            </a>
+            <p className="text-xs text-muted">— Mark Erikson</p>
+          </div>
         </div>
       </section>
+      </div>
 
       {/* Comparison */}
       <div className="bg-surface-tinted">
