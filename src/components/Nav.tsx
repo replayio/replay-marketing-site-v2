@@ -62,7 +62,7 @@ export default function Nav() {
             className="rounded-full px-4 py-2 text-sm font-medium text-white transition"
             style={{ background: "var(--brand-gradient)" }}
           >
-            Sign Up
+            Try Replay for Free
           </a>
         </div>
 
@@ -152,7 +152,7 @@ export default function Nav() {
             className="rounded-full px-4 py-2.5 text-sm font-medium text-white text-center transition"
             style={{ background: "var(--brand-gradient)" }}
           >
-            Sign Up
+            Try Replay for Free
           </a>
         </div>
       )}

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Footer from "@/components/Footer";
 import Nav from "@/components/Nav";
 import PricingCards from "@/components/PricingCards";
@@ -64,19 +65,48 @@ export default function PricingPage() {
           </span>
 
           <h1 className="text-5xl sm:text-6xl font-bold leading-[1.08] tracking-tight mb-5">
-            AI-Assisted CI/CD
+            Stop debugging blind.
             <br />
-            <span className="text-brand-pink">for your coding agent.</span>
+            <span className="text-brand-pink">Start for free.</span>
           </h1>
 
           <p className="text-lg text-muted max-w-lg mx-auto leading-relaxed">
-            Replay records every test failure, analyzes the recording, and
-            posts the root cause and a suggested fix as a PR comment.
+            Replay MCP gives your coding agent time-travel access to every test run — so it can trace failures to root cause and post a fix automatically, on every PR.
           </p>
         </div>
       </section>
 
       <PricingCards />
+
+      {/* Social proof */}
+      <section className="px-6 py-12 max-w-4xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
+          <div className="rounded-xl border border-border bg-surface p-8 flex flex-col justify-between">
+            <blockquote className="text-base leading-relaxed mb-6">
+              &ldquo;Next.js 13.4 wouldn&apos;t have been possible without Replay.&rdquo;
+            </blockquote>
+            <div className="flex items-center justify-between">
+              <div className="text-sm">
+                <div className="font-semibold">Tim Neutkins</div>
+                <div className="text-muted text-xs">Co-author of Next.js, Vercel</div>
+              </div>
+              <Image src="/logos/vercel.svg" alt="Vercel" width={64} height={20} className="h-4 w-auto opacity-50 dark:invert dark:opacity-40" />
+            </div>
+          </div>
+          <div className="rounded-xl border border-border bg-surface p-8 flex flex-col justify-between">
+            <blockquote className="text-base leading-relaxed mb-6">
+              &ldquo;Replay.io is galaxy brain tooling. Real gamechanger.&rdquo;
+            </blockquote>
+            <div className="flex items-center justify-between">
+              <div className="text-sm">
+                <div className="font-semibold">Dan Abramov</div>
+                <div className="text-muted text-xs">React Maintainer</div>
+              </div>
+              <Image src="/logos/react.svg" alt="React" width={24} height={24} className="h-5 w-auto opacity-50 dark:opacity-40" />
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Design Partner callout */}
       <section className="px-6 py-10 max-w-4xl mx-auto">

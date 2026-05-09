@@ -94,6 +94,9 @@ export default function Home() {
               Add Replay MCP
             </a>
           </div>
+          <p className="text-xs text-muted text-center mt-3">
+            14-day free trial · No credit card required · $299/mo after
+          </p>
         </section>
 
         <div className="relative z-10">
