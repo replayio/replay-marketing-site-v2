@@ -79,21 +79,13 @@ export default function Home() {
             time-travel agent analyzes the recording, traces the root cause, and
             posts the analysis and a suggested fix as a PR comment.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="https://app.replay.io/sign-up"
-              className="inline-block rounded-full px-8 py-3.5 text-base font-medium text-white hover:opacity-90 transition"
-              style={{ background: "var(--brand-gradient)" }}
-            >
-              Install the CI Agent &rarr;
-            </a>
-            <a
-              href="https://app.replay.io/sign-up"
-              className="inline-block rounded-full px-8 py-3.5 text-base font-medium border border-border hover:bg-surface transition"
-            >
-              Add Replay MCP
-            </a>
-          </div>
+          <a
+            href="https://app.replay.io/sign-up"
+            className="inline-block rounded-full px-8 py-3.5 text-base font-medium text-white hover:opacity-90 transition"
+            style={{ background: "var(--brand-gradient)" }}
+          >
+            Try Replay for free &rarr;
+          </a>
           <p className="text-xs text-muted text-center mt-3">
             14-day free trial · No credit card required · $299/mo after
           </p>
