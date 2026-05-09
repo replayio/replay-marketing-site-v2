@@ -67,7 +67,7 @@ export default function Home() {
         />
         <section className="hero-fade-in relative z-10 flex flex-col items-center text-center px-6 pt-24 pb-16 max-w-4xl mx-auto">
           <p className="text-sm font-medium uppercase tracking-widest text-brand-pink mb-6">
-            AI-Assisted CI/CD
+            Time-Travel Debugger From The Future
           </p>
           <h1 className="text-5xl sm:text-6xl font-bold leading-[1.1] tracking-tight mb-6">
             Your coding agent can&apos;t fix
@@ -81,14 +81,14 @@ export default function Home() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="https://docs.replay.io/basics/replay-ci-agent/overview"
+              href="https://app.replay.io/sign-up"
               className="inline-block rounded-full px-8 py-3.5 text-base font-medium text-white hover:opacity-90 transition"
               style={{ background: "var(--brand-gradient)" }}
             >
               Install the CI Agent &rarr;
             </a>
             <a
-              href="https://docs.replay.io/basics/replay-mcp/overview"
+              href="https://app.replay.io/sign-up"
               className="inline-block rounded-full px-8 py-3.5 text-base font-medium border border-border hover:bg-surface transition"
             >
               Add Replay MCP
