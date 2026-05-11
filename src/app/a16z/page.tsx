@@ -51,7 +51,7 @@ export default function A16ZPage() {
             <span className="text-brand-pink">when they can see what breaks.</span>
           </h1>
           <p className="text-lg text-muted max-w-2xl mb-4 leading-relaxed">
-            Replay is a fellow a16z portfolio company. We&apos;re building the time-travel debugger that gives AI coding agents runtime visibility — so they can find root causes, not just symptoms.
+            Replay is a fellow a16z portfolio company. We&apos;ve built the time-travel debugger that gives AI coding agents runtime visibility — so they can find root causes, not just symptoms.
           </p>
           <p className="text-base text-muted max-w-xl mb-10 leading-relaxed">
             We&apos;re in good company. And we want to make it easy for portcos to get started with an exclusive offer.
