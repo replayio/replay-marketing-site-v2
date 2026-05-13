@@ -106,7 +106,7 @@ export default function Home() {
           </h2>
           <div className="space-y-6 text-muted text-lg leading-relaxed">
             <p>
-              A test fails in CI. The stack trace tells you what broke — not why.
+              A test fails in CI. The test assertion tells you what failed—not what broke.
               Someone opens DevTools, reproduces it locally if they&apos;re lucky,
               and eventually figures out the root cause. That&apos;s an hour per
               failure. Multiply by your team.
