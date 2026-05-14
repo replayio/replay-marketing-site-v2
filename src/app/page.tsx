@@ -2,7 +2,6 @@ import Image from "next/image";
 import desertBgStamps from "@/images/desert-bg-stamps.png";
 import FeatureTabs from "@/components/FeatureTabs";
 import BugToFixTabs from "@/components/BugToFixTabs";
-import TwoWaysToConnect from "@/components/TwoWaysToConnect";
 import Footer from "@/components/Footer";
 import { FAQSchema, OrganizationSchema } from "@/components/JsonLd";
 import LogoMarquee from "@/components/LogoMarquee";
@@ -163,11 +162,6 @@ export default function Home() {
         <FeatureTabs />
       </div>
 
-      {/* Two Products */}
-      <TwoWaysToConnect />
-
-      {/* Bug to Fix — MCP in action */}
-      <BugToFixTabs />
 
       {/* Technical Depth */}
       <section className="px-6 py-24 max-w-5xl mx-auto">
@@ -342,6 +336,50 @@ export default function Home() {
           </div>
         </section>
       </div>
+
+      {/* Dan Abramov proof point callout */}
+      <section className="px-6 py-12 max-w-4xl mx-auto">
+        <div className="rounded-xl border border-border bg-surface p-8 flex flex-col sm:flex-row gap-8 items-start">
+          <div className="flex-1">
+            <p className="text-xs font-semibold uppercase tracking-widest text-brand-pink mb-2">Featured proof point</p>
+            <h3 className="text-xl font-bold mb-3">Replay solved a bug that stumped Dan Abramov</h3>
+            <p className="text-sm text-muted leading-relaxed mb-4">
+              Dan had been manually debugging a React 19 race condition. Replay&apos;s agent traced it to root cause in 7 minutes — using the same time-travel recording data that powers our CI Agent analysis. The analysis identified the exact fix without any human intervention.
+            </p>
+            <a
+              href="https://www.replay.io/blog/replay-time-travelogue-how-replay-mcp-helped-find-a-react-bug-faster-than-dan-abramov-did"
+              className="text-sm font-medium text-brand-pink hover:opacity-80 transition"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Read the full story &rarr;
+            </a>
+          </div>
+          <blockquote className="flex-shrink-0 sm:w-60 rounded-xl bg-surface-tinted border border-border p-5 text-sm leading-relaxed italic text-muted">
+            &ldquo;Replay.io is galaxy brain tooling. Real gamechanger.&rdquo;
+            <div className="mt-3 not-italic">
+              <div className="text-xs font-semibold text-foreground">Dan Abramov</div>
+              <div className="text-xs text-muted">React Maintainer</div>
+            </div>
+          </blockquote>
+        </div>
+      </section>
+
+      {/* Individual debugging breadcrumb */}
+      <div className="bg-surface-tinted">
+        <section className="px-6 py-12 max-w-3xl mx-auto text-center">
+          <h3 className="text-lg font-semibold mb-2">Debugging a specific bug?</h3>
+          <p className="text-sm text-muted leading-relaxed max-w-lg mx-auto mb-4">
+            Replay also works for individual developers hunting down hard-to-reproduce bugs. Connect Replay MCP to your coding agent and it can step through any recorded execution — same time-travel data, directly in your IDE.
+          </p>
+          <a href="/for-engineers" className="text-sm font-medium text-brand-purple hover:opacity-80 transition">
+            Learn how it works for individual debugging &rarr;
+          </a>
+        </section>
+      </div>
+
+      {/* Bug to Fix — MCP in action */}
+      <BugToFixTabs />
 
       {/* Time Travelogue story cards */}
       <div className="relative overflow-hidden">
