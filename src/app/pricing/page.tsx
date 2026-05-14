@@ -7,27 +7,31 @@ import PricingCards from "@/components/PricingCards";
 export const metadata: Metadata = {
   title: "Pricing — Replay",
   description:
-    "Replay's time-travel agent analyzes every CI failure and posts the root cause and a suggested fix to your PR. $299/month. Start with a 14-day free trial.",
+    "Start free with 25 AI analyses per month. Upgrade to Growth at $299/mo for 500 analyses and automated root cause on every CI failure.",
   alternates: { canonical: "/pricing" },
   openGraph: {
     title: "Pricing — Replay",
     description:
-      "Replay's time-travel agent analyzes every CI failure and posts the root cause and a suggested fix to your PR. $299/month. Start with a 14-day free trial.",
+      "Start free with 25 AI analyses per month. Upgrade to Growth at $299/mo for 500 analyses and automated root cause on every CI failure.",
   },
 };
 
 const faqs = [
   {
-    q: "What does the 14-day trial include?",
-    a: "Full access to everything — CI/CD integration, AI root cause analysis on every test failure, suggested fixes fed back to your coding agent, and all agent integrations. No credit card required to start.",
+    q: "What's the difference between Free and Growth?",
+    a: "Free gives you 25 AI analyses per month — enough to evaluate Replay on real failures with no time limit. Growth unlocks 500 analyses per month, unlimited recordings, and all CI and coding agent integrations. Both plans work with CI Agent and Replay MCP.",
+  },
+  {
+    q: "What does the 14-day Growth trial include?",
+    a: "Full Growth plan access — 500 AI analyses, all CI integrations, all coding agent integrations. No credit card required. After the trial you can stay on Free (25 analyses/month) or subscribe to Growth.",
   },
   {
     q: "What happens after the trial ends?",
-    a: "Recordings will continue but AI analysis pauses until you subscribe. Your CI/CD integration stays in place — you just won't get the root cause and suggested fix on new failures until you're on a paid plan.",
+    a: "You're automatically moved to the Free plan — 25 analyses per month, no interruption to your CI/CD setup. Upgrade to Growth any time to get 500 analyses and restore full throughput.",
   },
   {
     q: "Which test frameworks and CI providers does it support?",
-    a: "Replay works with Playwright. It integrates with GitHub Actions, CircleCI, Jenkins, and any CI that can run a shell command. No changes to your existing tests required.",
+    a: "Replay works with Playwright and Cypress. It integrates with GitHub Actions, CircleCI, Jenkins, BuildKite, and any CI that can run a shell command. No changes to your existing tests required.",
   },
   {
     q: "Which coding agents does it work with?",
@@ -61,7 +65,7 @@ export default function PricingPage() {
         <div className="relative z-10">
           <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-border bg-surface text-sm text-muted mb-6">
             <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
-            14-day free trial · No credit card required
+            Free plan available · No credit card required
           </span>
 
           <h1 className="text-5xl sm:text-6xl font-bold leading-[1.08] tracking-tight mb-5">
@@ -71,7 +75,7 @@ export default function PricingPage() {
           </h1>
 
           <p className="text-lg text-muted max-w-lg mx-auto leading-relaxed">
-            Replay MCP gives your coding agent time-travel access to every test run — so it can trace failures to root cause and post a fix automatically, on every PR.
+            Replay CI Agent records every test run, analyzes failures using time-travel data, and posts a root cause and fix to your PR — automatically. Free for low usage. $299/mo for teams.
           </p>
         </div>
       </section>
@@ -133,8 +137,7 @@ export default function PricingPage() {
       <section className="px-6 py-16 max-w-3xl mx-auto text-center">
         <h2 className="text-2xl font-bold mb-3">Start integrating in 5 minutes.</h2>
         <p className="text-muted leading-relaxed max-w-xl mx-auto">
-          Full access for 14 days. No credit card required. If you don&apos;t have the
-          value moment within the first week, we want to hear why.
+          The Free plan is yours with no time limit. The Growth trial gives you 14 days of full access — no credit card required. If you don&apos;t have a value moment within the first week, we want to hear why.
         </p>
       </section>
 

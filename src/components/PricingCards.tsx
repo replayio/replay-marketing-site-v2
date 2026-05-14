@@ -27,10 +27,10 @@ export default function PricingCards() {
 
   return (
     <div className="bg-surface-tinted">
-      <section className="px-6 py-20 max-w-4xl mx-auto">
+      <section className="px-6 py-20 max-w-6xl mx-auto">
 
         {/* Toggle */}
-        <div className="flex items-center justify-center gap-3 mb-12">
+        <div className="flex items-center justify-center gap-3 mb-10">
           <button
             onClick={() => setAnnual(false)}
             className={`text-sm font-medium transition ${!annual ? "text-foreground" : "text-muted"}`}
@@ -59,26 +59,75 @@ export default function PricingCards() {
           </button>
         </div>
 
-        <p className="text-center text-sm text-muted mb-8">
+        <p className="text-center text-sm text-muted mb-10">
           Not sure if it&apos;s worth it?{" "}
           <a href="/roi-calculator" className="text-brand-purple hover:opacity-80 transition underline underline-offset-2">
             Calculate your team&apos;s ROI →
           </a>
         </p>
 
-        <div className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+        <div className="grid md:grid-cols-3 gap-6">
 
-          {/* Replay Growth */}
-          <div className="relative flex flex-col rounded-xl border border-brand-pink bg-brand-pink/[0.03] dark:bg-brand-pink/[0.04] p-8">
-            <p className="text-[11px] font-semibold uppercase tracking-[0.1em] text-brand-pink mb-2">
-              Replay Growth
+          {/* Free */}
+          <div className="relative flex flex-col rounded-xl border border-border bg-surface p-8">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.1em] text-muted mb-2">
+              Free
             </p>
             <h2 className="text-xl font-semibold tracking-tight mb-2 leading-snug">
-              AI-assisted CI/CD for React and Next.js teams
+              Evaluate Replay with real recordings
             </h2>
             <p className="text-sm text-muted leading-relaxed mb-6">
-              When a test fails, Replay records it, analyzes the recording, and
-              posts the root cause and a suggested fix as a PR comment.
+              Works with CI Agent and Replay MCP — no time limit, no credit card required.
+            </p>
+
+            <div className="font-semibold tracking-tight mb-1 leading-none text-[42px]">
+              $0
+            </div>
+            <p className="text-xs text-muted mb-6">always free</p>
+
+            <div className="h-px bg-border mb-5" />
+
+            <p className="text-[11px] font-semibold uppercase tracking-[0.08em] text-muted mb-3">
+              Includes
+            </p>
+            <ul className="flex flex-col gap-2.5 mb-8 flex-1">
+              {[
+                "25 AI analyses per month",
+                "CI Agent integration",
+                "Replay MCP for IDE debugging",
+                "Replay DevTools access",
+                "Community support",
+              ].map((f) => (
+                <li key={f} className="flex items-start gap-2.5 text-sm text-muted leading-snug">
+                  <Check />
+                  {f}
+                </li>
+              ))}
+            </ul>
+
+            <a
+              href="https://app.replay.io/sign-up"
+              className="block w-full text-center py-3 rounded-xl text-sm font-medium transition border border-border text-muted hover:border-foreground/30 hover:text-foreground"
+            >
+              Get started free
+            </a>
+          </div>
+
+          {/* Growth — featured */}
+          <div className="relative flex flex-col rounded-xl border border-brand-pink bg-brand-pink/[0.03] dark:bg-brand-pink/[0.04] p-8">
+            <div className="absolute -top-3 left-1/2 -translate-x-1/2">
+              <span className="bg-brand-pink text-white text-[10px] font-semibold uppercase tracking-widest px-3 py-1 rounded-full whitespace-nowrap">
+                Most popular
+              </span>
+            </div>
+            <p className="text-[11px] font-semibold uppercase tracking-[0.1em] text-brand-pink mb-2">
+              Growth
+            </p>
+            <h2 className="text-xl font-semibold tracking-tight mb-2 leading-snug">
+              Automated analysis on every CI failure
+            </h2>
+            <p className="text-sm text-muted leading-relaxed mb-6">
+              Every failed test gets analyzed automatically. Root cause and fix posted to your PR — no manual debugging needed.
             </p>
 
             <div className="font-semibold tracking-tight mb-1 leading-none text-[42px] transition-all">
@@ -90,15 +139,15 @@ export default function PricingCards() {
             <div className="h-px bg-border mb-5" />
 
             <p className="text-[11px] font-semibold uppercase tracking-[0.08em] text-muted mb-3">
-              Includes
+              Everything in Free, plus
             </p>
             <ul className="flex flex-col gap-2.5 mb-8 flex-1">
               {[
-                "Integrates with your test suite and GitHub PRs",
-                "AI root cause analysis on test failures — automatically",
-                "Suggested fixes fed back to your coding agent",
-                "500 AI analyses per month included",
-                "Playwright support",
+                "500 AI analyses per month",
+                "Unlimited recordings",
+                "All CI integrations (GitHub Actions, CircleCI, Jenkins, BuildKite)",
+                "All coding agent integrations (Claude Code, Codex, Cursor, Copilot, Windsurf)",
+                "Email support",
               ].map((f) => (
                 <li key={f} className="flex items-start gap-2.5 text-sm text-muted leading-snug">
                   <Check />
@@ -124,11 +173,10 @@ export default function PricingCards() {
               Enterprise
             </p>
             <h2 className="text-xl font-semibold tracking-tight mb-2 leading-snug">
-              For teams with high PR velocity or org-wide deployments
+              For teams running Replay at scale
             </h2>
             <p className="text-sm text-muted leading-relaxed mb-6">
-              Platform integrations, custom contracts, and dedicated support for
-              teams running Replay at scale.
+              Custom contracts, platform integrations, and dedicated support for high-velocity teams.
             </p>
 
             <div className="font-semibold tracking-tight mb-1 leading-none text-[34px]">
@@ -139,12 +187,11 @@ export default function PricingCards() {
             <div className="h-px bg-border mb-5" />
 
             <p className="text-[11px] font-semibold uppercase tracking-[0.08em] text-muted mb-3">
-              Includes
+              Everything in Growth, plus
             </p>
             <ul className="flex flex-col gap-2.5 mb-8 flex-1">
               {[
-                "Unlimited recordings",
-                "Usage-based or seat-based — we'll find the right model together",
+                "Unlimited AI analyses",
                 "Priority support and dedicated onboarding",
                 "SLA guarantees",
                 "SSO and advanced access controls",
