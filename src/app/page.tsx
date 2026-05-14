@@ -16,20 +16,24 @@ export default function Home() {
       <FAQSchema
         items={[
           {
-            q: "What is the Replay CI Agent?",
-            a: "The Replay CI Agent is a GitHub bot that watches your PRs, records every Playwright test run, and — when a test fails — analyzes the recording and posts the root cause plus a suggested fix as a PR comment. No manual debugging required.",
+            q: "How does Replay record my tests?",
+            a: "Replay works by swapping in a Replay-instrumented browser in your CI config. When a test runs, Replay captures every DOM mutation, network request, and JS execution deterministically \u2014 so the recording is a perfect, replayable trace of exactly what happened.",
           },
           {
-            q: "What is Replay MCP?",
-            a: "Replay MCP is a Model Context Protocol server that gives your coding agent time-travel debugging capabilities. It connects Replay\u2019s recording engine to Cursor, Claude Code, Codex, Copilot, and Windsurf — so your agent can step through any recorded execution and identify the root cause of a bug directly.",
+            q: "What kind of analysis does the agent provide?",
+            a: "For each failing test, Replay posts a PR comment with: a root cause statement, a confidence score, the exact line of code that caused the failure, and an evidence trail showing the sequence of events leading up to it. If the failure has a clear fix, it includes a suggested code change.",
           },
           {
-            q: "Which test frameworks does it support?",
-            a: "Replay works with Playwright. Point it at your existing test suite \u2014 no changes to your tests required.",
+            q: "Does Replay only work with React?",
+            a: "No \u2014 Replay works with any JavaScript or TypeScript application. React apps get deeper analysis because Replay can inspect component state and re-renders, but Replay captures full execution data for any JS stack.",
           },
           {
-            q: "How is this different from Datadog, Sentry, or LogRocket?",
-            a: "Those tools surface what went wrong. Replay shows your agent exactly why \u2014 every DOM mutation, network call, and JS execution frame, captured deterministically. Replay MCP analyzes the recording and generates a specific fix. No human needs to read a trace.",
+            q: "How long does analysis take?",
+            a: "Usually a few minutes after the test run completes. Replay posts its analysis as a PR comment, so your developer sees the root cause and suggested fix before they even open the CI logs.",
+          },
+          {
+            q: "What if the agent\u2019s analysis is wrong?",
+            a: "Replay includes a confidence score with every analysis, so you can tell at a glance how certain it is. Every analysis also links to the full recording \u2014 you can open it in Replay DevTools and inspect every frame yourself.",
           },
           {
             q: "Does recording slow down my CI?",
@@ -37,7 +41,7 @@ export default function Home() {
           },
           {
             q: "How much does this cost?",
-            a: "Replay Growth is $299/month (annual) or $349/month (monthly) and includes 500 AI analyses per month. There\u2019s a 14-day free trial \u2014 no credit card required. See replay.io/pricing for details.",
+            a: "Replay Growth is \/month (annual) or \/month (monthly) and includes 500 AI analyses per month. There\u2019s a 14-day free trial \u2014 no credit card required. See replay.io/pricing for details.",
           },
         ]}
       />
@@ -66,18 +70,13 @@ export default function Home() {
           }}
         />
         <section className="hero-fade-in relative z-10 flex flex-col items-center text-center px-6 pt-24 pb-16 max-w-4xl mx-auto">
-          <p className="text-sm font-medium uppercase tracking-widest text-brand-pink mb-6">
-            Time-Travel Debugger<br className="sm:hidden" /> From The Future
-          </p>
           <h1 className="text-5xl sm:text-6xl font-bold leading-[1.1] tracking-tight mb-6">
-            Your coding agent can&apos;t fix
+            Your E2E tests fail.
             <br />
-            <span className="text-brand-pink">what it can&apos;t see.</span>
+            <span className="text-brand-pink">Replay tells you why — and how to fix it.</span>
           </h1>
           <p className="text-lg text-muted max-w-2xl mb-10 leading-relaxed">
-            Replay records every test run. When something breaks, Replay's
-            time-travel agent analyzes the recording, traces the root cause, and
-            posts the analysis and a suggested fix as a PR comment.
+            Replay CI Agent automatically records every test run, analyzes failures using time-travel debugging data, and posts a root cause, failure trace, and suggested fix as a comment on your PR.
           </p>
           <a
             href="https://app.replay.io/sign-up"
@@ -408,7 +407,7 @@ export default function Home() {
       <div className="bg-surface-tinted">
         <section className="px-6 py-24 max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-12">
-            CI that explains itself vs. the old way
+            With Replay CI Agent vs. without
           </h2>
           <div className="grid md:grid-cols-2 gap-8">
             <div className="rounded-xl border border-border bg-surface p-8">
@@ -416,23 +415,25 @@ export default function Home() {
                 Without Replay
               </h3>
               <ul className="space-y-3 text-sm text-muted">
-                <li>Test fails &rarr; engineer debugs manually &rarr; hours lost</li>
-                <li>Agents loop on the same failure, guessing at fixes</li>
-                <li>Flaky tests get retried and silently ignored</li>
-                <li>High maintenance overhead discourages writing more tests</li>
-                <li>Root cause lives in someone&apos;s head, not your codebase</li>
+                <li>Test fails &rarr; read error message, guess at cause</li>
+                <li>Root cause requires manual reproduction, console.logs, trial and error</li>
+                <li>30 min to 2+ hours per failure</li>
+                <li>Flaky tests get marked as flaky, ignored, accumulate</li>
+                <li>PRs blocked, CI re-runs burn time and money</li>
+                <li>Requires deep codebase knowledge to investigate</li>
               </ul>
             </div>
             <div className="rounded-xl border border-brand-purple/30 bg-brand-purple/5 p-8">
               <h3 className="text-brand-purple font-semibold text-sm uppercase tracking-widest mb-4">
-                With Replay
+                With Replay CI Agent
               </h3>
               <ul className="space-y-3 text-sm text-foreground/80">
-                <li>Test fails &rarr; Replay analyzes &rarr; root cause + suggested fix on your PR</li>
-                <li>Agents get runtime context and fix it on the first try</li>
-                <li>Flaky tests get recorded, diagnosed, and fixed</li>
-                <li>Low maintenance overhead means teams write more tests</li>
-                <li>Root cause documented on every PR, automatically</li>
+                <li>Test fails &rarr; agent traces exact failure sequence</li>
+                <li>Root cause identified automatically with confidence score</li>
+                <li>Fix suggestion posted in minutes</li>
+                <li>Each failure investigated individually with runtime evidence</li>
+                <li>Developer reads comment, applies fix, merges</li>
+                <li>Zero investigation effort — agent does the work</li>
               </ul>
             </div>
           </div>
@@ -442,13 +443,40 @@ export default function Home() {
       {/* Integrations */}
       <section className="px-6 py-20 max-w-4xl mx-auto text-center">
         <h2 className="text-3xl font-bold mb-4">
-          Works with your stack
+          Fits your existing CI pipeline
         </h2>
         <p className="text-muted max-w-2xl mx-auto mb-12">
-          Replay plugs into your existing CI, test frameworks, and coding agents.
-          No infrastructure changes.
+          Swap in Replay in your Playwright or Cypress config and install the GitHub bot. No changes to your test code.
         </p>
         <div className="mb-8">
+          <p className="text-xs text-muted/60 uppercase tracking-widest mb-4">
+            Test frameworks &amp; CI
+          </p>
+          <div className="flex flex-wrap justify-center gap-3">
+            {[
+              { name: "Playwright", logo: "/logos/playwright.svg" },
+              { name: "Cypress", logo: "/logos/cypress.svg" },
+              { name: "GitHub Actions", logo: "/logos/github-actions.svg" },
+              { name: "CircleCI", logo: "/logos/circleci.svg" },
+              { name: "Jenkins", logo: "/logos/jenkins.svg" },
+            ].map((item) => (
+              <span
+                key={item.name}
+                className="rounded-full border border-border bg-surface px-5 py-2 text-sm inline-flex items-center gap-2"
+              >
+                <Image
+                  src={item.logo}
+                  alt={item.name}
+                  width={18}
+                  height={18}
+                  className="w-[18px] h-[18px] dark:invert"
+                />
+                {item.name}
+              </span>
+            ))}
+          </div>
+        </div>
+        <div>
           <p className="text-xs text-muted/60 uppercase tracking-widest mb-4">
             Coding agents
           </p>
@@ -476,34 +504,6 @@ export default function Home() {
             ))}
           </div>
         </div>
-        <div>
-          <p className="text-xs text-muted/60 uppercase tracking-widest mb-4">
-            Test frameworks &amp; CI
-          </p>
-          <div className="flex flex-wrap justify-center gap-3">
-            {[
-              { name: "Playwright", logo: "/logos/playwright.svg" },
-              { name: "Selenium", logo: "/logos/selenium.svg" },
-              { name: "GitHub Actions", logo: "/logos/github-actions.svg" },
-              { name: "CircleCI", logo: "/logos/circleci.svg" },
-              { name: "Jenkins", logo: "/logos/jenkins.svg" },
-            ].map((item) => (
-              <span
-                key={item.name}
-                className="rounded-full border border-border bg-surface px-5 py-2 text-sm inline-flex items-center gap-2"
-              >
-                <Image
-                  src={item.logo}
-                  alt={item.name}
-                  width={18}
-                  height={18}
-                  className="w-[18px] h-[18px] dark:invert"
-                />
-                {item.name}
-              </span>
-            ))}
-          </div>
-        </div>
       </section>
 
       {/* FAQ */}
@@ -515,20 +515,24 @@ export default function Home() {
           <div className="space-y-8">
             {[
               {
-                q: "What is the Replay CI Agent?",
-                a: "The Replay CI Agent is a GitHub bot that watches your PRs, records every Playwright test run, and — when a test fails — analyzes the recording and posts the root cause plus a suggested fix as a PR comment. No manual debugging required.",
+                q: "How does Replay record my tests?",
+                a: "Replay works by swapping in a Replay-instrumented browser in your CI config. When a test runs, Replay captures every DOM mutation, network request, and JS execution deterministically \u2014 so the recording is a perfect, replayable trace of exactly what happened.",
               },
               {
-                q: "What is Replay MCP?",
-                a: "Replay MCP is a Model Context Protocol server that gives your coding agent time-travel debugging capabilities. It connects Replay\u2019s recording engine to Cursor, Claude Code, Codex, Copilot, and Windsurf — so your agent can step through any recorded execution and identify the root cause of a bug directly.",
+                q: "What kind of analysis does the agent provide?",
+                a: "For each failing test, Replay posts a PR comment with: a root cause statement, a confidence score, the exact line of code that caused the failure, and an evidence trail showing the sequence of events leading up to it. If the failure has a clear fix, it includes a suggested code change.",
               },
               {
-                q: "Which test frameworks does it support?",
-                a: "Replay works with Playwright. Point it at your existing test suite \u2014 no changes to your tests required.",
+                q: "Does Replay only work with React?",
+                a: "No \u2014 Replay works with any JavaScript or TypeScript application. React apps get deeper analysis because Replay can inspect component state and re-renders, but Replay captures full execution data for any JS stack.",
               },
               {
-                q: "How is this different from Datadog, Sentry, or LogRocket?",
-                a: "Those tools surface what went wrong. Replay shows your agent exactly why \u2014 every DOM mutation, network call, and JS execution frame, captured deterministically. Replay MCP analyzes the recording and generates a specific fix. No human needs to read a trace.",
+                q: "How long does analysis take?",
+                a: "Usually a few minutes after the test run completes. Replay posts its analysis as a PR comment, so your developer sees the root cause and suggested fix before they even open the CI logs.",
+              },
+              {
+                q: "What if the agent\u2019s analysis is wrong?",
+                a: "Replay includes a confidence score with every analysis, so you can tell at a glance how certain it is. Every analysis also links to the full recording \u2014 you can open it in Replay DevTools and inspect every frame yourself.",
               },
               {
                 q: "Does recording slow down my CI?",
@@ -556,28 +560,18 @@ export default function Home() {
       {/* Final CTA */}
       <section id="cta" className="px-6 py-24 max-w-3xl mx-auto text-center">
         <h2 className="text-3xl sm:text-4xl font-bold mb-4 leading-tight">
-          Stop debugging for your agent.
-          <br />
-          <span className="text-brand-pink">Give it time-travel.</span>
+          Stop debugging test failures manually.
         </h2>
         <p className="text-muted max-w-xl mx-auto mb-8 text-lg">
-          Free to get started. No credit card required.
+          14-day free trial. No credit card required. $299/mo after.
         </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <a
-            href="https://docs.replay.io/basics/replay-ci-agent/overview"
-            className="inline-block rounded-full px-8 py-3.5 text-base font-medium text-white hover:opacity-90 transition"
-            style={{ background: "var(--brand-gradient)" }}
-          >
-            Install the CI Agent
-          </a>
-          <a
-            href="https://docs.replay.io/basics/replay-mcp/overview"
-            className="inline-block rounded-full px-8 py-3.5 text-base font-medium border border-border hover:bg-surface transition"
-          >
-            Add Replay MCP
-          </a>
-        </div>
+        <a
+          href="https://app.replay.io/sign-up"
+          className="inline-block rounded-full px-8 py-3.5 text-base font-medium text-white hover:opacity-90 transition"
+          style={{ background: "var(--brand-gradient)" }}
+        >
+          Start free trial &rarr;
+        </a>
       </section>
 
       <Footer />
