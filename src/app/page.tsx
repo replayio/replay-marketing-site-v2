@@ -387,7 +387,7 @@ export default function Home() {
           <p className="text-sm text-muted leading-relaxed max-w-lg mx-auto mb-4">
             Replay also works for individual developers hunting down hard-to-reproduce bugs. Connect Replay MCP to your coding agent and it can step through any recorded execution — same time-travel data, directly in your IDE.
           </p>
-          <a href="/for-engineers" className="text-sm font-medium text-brand-purple hover:opacity-80 transition">
+          <a href="/debugging" className="text-sm font-medium text-brand-purple hover:opacity-80 transition">
             Learn how it works for individual debugging &rarr;
           </a>
         </section>
