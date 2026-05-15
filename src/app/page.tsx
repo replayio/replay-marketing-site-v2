@@ -341,7 +341,7 @@ export default function Home() {
       <section className="px-6 py-12 max-w-4xl mx-auto">
         <div className="rounded-xl border border-border bg-surface p-8 flex flex-col gap-6">
           {/* Top row: image left, text right */}
-          <div className="flex flex-col sm:flex-row gap-8 items-stretch">
+          <div className="flex flex-col sm:flex-row gap-8 items-start">
             <a
               href="https://www.replay.io/blog/replay-time-travelogue-how-replay-mcp-helped-find-a-react-bug-faster-than-dan-abramov-did"
               className="flex-shrink-0 sm:w-72 hover:opacity-90 transition"
@@ -351,7 +351,7 @@ export default function Home() {
               <Image
                 src={travelogueDan}
                 alt="Replay Time Travelogue — Dan Abramov"
-                className="border border-border w-full h-full object-cover"
+                className="border border-border w-full h-auto"
               />
             </a>
             <div className="flex-1">
