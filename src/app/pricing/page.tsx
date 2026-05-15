@@ -22,12 +22,8 @@ const faqs = [
     a: "Free gives you 25 AI analyses per month — enough to evaluate Replay on real failures with no time limit. Growth unlocks 500 analyses per month, unlimited recordings, and all CI and coding agent integrations. Both plans work with CI Agent and Replay MCP.",
   },
   {
-    q: "What does the 14-day Growth trial include?",
-    a: "Full Growth plan access — 500 AI analyses, all CI integrations, all coding agent integrations. No credit card required. After the trial you can stay on Free (25 analyses/month) or subscribe to Growth.",
-  },
-  {
-    q: "What happens after the trial ends?",
-    a: "You're automatically moved to the Free plan — 25 analyses per month, no interruption to your CI/CD setup. Upgrade to Growth any time to get 500 analyses and restore full throughput.",
+    q: "Can I upgrade or downgrade at any time?",
+    a: "Yes. Start on Free and upgrade to Growth whenever you're ready — no commitment required. If you're on Growth and want to step back, you can downgrade to Free at the end of your billing period.",
   },
   {
     q: "Which test frameworks and CI providers does it support?",
@@ -65,7 +61,7 @@ export default function PricingPage() {
         <div className="relative z-10">
           <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-border bg-surface text-sm text-muted mb-6">
             <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
-            Free plan available · No credit card required
+            Free plan · No credit card required
           </span>
 
           <h1 className="text-5xl sm:text-6xl font-bold leading-[1.08] tracking-tight mb-5">
@@ -137,7 +133,7 @@ export default function PricingPage() {
       <section className="px-6 py-16 max-w-3xl mx-auto text-center">
         <h2 className="text-2xl font-bold mb-3">Start integrating in 5 minutes.</h2>
         <p className="text-muted leading-relaxed max-w-xl mx-auto">
-          The Free plan is yours with no time limit. The Growth trial gives you 14 days of full access — no credit card required. If you don&apos;t have a value moment within the first week, we want to hear why.
+          Start on the Free plan — no time limit, no credit card required. Upgrade to Growth when you need more. If you don&apos;t have a value moment within the first week, we want to hear why.
         </p>
       </section>
 

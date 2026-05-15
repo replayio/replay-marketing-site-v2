@@ -333,7 +333,7 @@ export default function RoiCalculator() {
             className="flex-1 text-center rounded-full py-3 text-sm font-medium text-white hover:opacity-90 transition"
             style={{ background: "var(--brand-gradient)" }}
           >
-            Start your 14-day free trial
+            Get started free
           </a>
           <Link
             href="/pricing"

@@ -160,10 +160,10 @@ export default function PricingCards() {
               href="https://app.replay.io/sign-up"
               className="block w-full text-center py-3 rounded-xl text-sm font-medium transition bg-brand-pink text-white hover:opacity-90"
             >
-              Start free trial
+              Get started
             </a>
             <p className="text-center text-xs text-muted mt-3">
-              14-day free trial · No credit card required
+              No credit card required
             </p>
           </div>
 

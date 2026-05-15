@@ -64,7 +64,7 @@ export default function A16ZPage() {
             Claim your portco discount &rarr;
           </a>
           <p className="text-xs text-muted mt-3">
-            20% off · 14-day free trial · No credit card required
+            20% off · Free plan available · No credit card required
           </p>
         </section>
       </div>
@@ -263,7 +263,7 @@ export default function A16ZPage() {
                   "Unlimited recordings",
                   "Full CI Agent + Replay MCP access",
                   "All coding agent integrations",
-                  "14-day free trial included",
+                  "Free plan included, no time limit",
                 ].map((f) => (
                   <li key={f} className="flex items-start gap-2">
                     <span className="text-brand-pink mt-0.5">✓</span>

@@ -40,7 +40,7 @@ export default function Home() {
           },
           {
             q: "How much does this cost?",
-            a: "Replay Growth is \/month (annual) or \/month (monthly) and includes 500 AI analyses per month. There\u2019s a 14-day free trial \u2014 no credit card required. See replay.io/pricing for details.",
+            a: "Start on the Free plan (25 analyses/month) with no time limit \u2014 no credit card required. Upgrade to Growth for $299/month (annual) to unlock 500 analyses and full CI integration.",
           },
         ]}
       />
@@ -85,7 +85,7 @@ export default function Home() {
             Try Replay for free &rarr;
           </a>
           <p className="text-xs text-muted text-center mt-3">
-            14-day free trial · No credit card required · $299/mo after
+            Start free · No credit card required · $299/mo for Growth
           </p>
         </section>
 
@@ -589,7 +589,7 @@ export default function Home() {
             <div className="border-b border-border pb-6">
               <h3 className="text-base font-semibold mb-2">How much does this cost?</h3>
               <p className="text-sm text-muted leading-relaxed">
-                Replay Growth is $299/month (billed annually) or $349/month (billed monthly), and includes 500 AI analyses per month. There&apos;s a 14-day free trial — no credit card required.{" "}
+                Replay Growth is $299/month (billed annually) or $349/month (billed monthly), and includes 500 AI analyses per month. Start on the Free plan (25 analyses/month) with no time limit.{" "}
                 <a href="/pricing" className="text-brand-purple hover:opacity-80 transition">
                   See full pricing →
                 </a>
@@ -605,14 +605,14 @@ export default function Home() {
           Stop debugging test failures manually.
         </h2>
         <p className="text-muted max-w-xl mx-auto mb-8 text-lg">
-          14-day free trial. No credit card required. $299/mo after.
+          Free plan available. No credit card required. $299/mo for Growth.
         </p>
         <a
           href="https://app.replay.io/sign-up"
           className="inline-block rounded-full px-8 py-3.5 text-base font-medium text-white hover:opacity-90 transition"
           style={{ background: "var(--brand-gradient)" }}
         >
-          Start free trial &rarr;
+          Get started free &rarr;
         </a>
       </section>
 

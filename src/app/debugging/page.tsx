@@ -40,7 +40,7 @@ const faqs = [
   },
   {
     q: "Is Replay free for individual use?",
-    a: "The 14-day free trial gives you full access to record and investigate. After the trial, individual debugging is available on the Growth plan at $299/mo — or reach out if you're an individual developer and we'll figure something out.",
+    a: "The Free plan lets you record and investigate with no time limit — start without a credit card. For higher volume, individual debugging is available on the Growth plan at $299/mo — or reach out if you're an individual developer and we'll figure something out.",
   },
 ];
 
@@ -352,7 +352,7 @@ export default function DebuggingPage() {
               <p className="text-xs font-semibold uppercase tracking-widest text-brand-pink mb-1.5">Also from Replay</p>
               <h3 className="text-base font-semibold mb-1">Want automated analysis on every CI failure?</h3>
               <p className="text-sm text-muted leading-relaxed max-w-lg">
-                Replay CI Agent records every E2E test run automatically and posts root cause + fix as a PR comment — no manual recording needed. $299/mo, 14-day free trial.
+                Replay CI Agent records every E2E test run automatically and posts root cause + fix as a PR comment — no manual recording needed. Free plan available, $299/mo for Growth.
               </p>
             </div>
             <a
