@@ -1,7 +1,6 @@
 import Image from "next/image";
 import desertBgStamps from "@/images/desert-bg-stamps.png";
 import FeatureTabs from "@/components/FeatureTabs";
-import BugToFixTabs from "@/components/BugToFixTabs";
 import Footer from "@/components/Footer";
 import { FAQSchema, OrganizationSchema } from "@/components/JsonLd";
 import LogoMarquee from "@/components/LogoMarquee";
@@ -393,10 +392,7 @@ export default function Home() {
         </section>
       </div>
 
-      {/* Bug to Fix — MCP in action */}
-      <BugToFixTabs />
-
-      {/* Time Travelogue story cards */}
+{/* Time Travelogue story cards */}
       <div className="relative overflow-hidden">
         <Image
           src={desertBgStamps}
