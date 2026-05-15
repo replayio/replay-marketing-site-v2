@@ -1,5 +1,5 @@
 import Image from "next/image";
-import ciAgentDemo from "@/images/ci-agent-demo.gif";
+import ciAgentDemo from "@/images/ci-agent-demo-large.gif";
 
 const steps = [
   {
