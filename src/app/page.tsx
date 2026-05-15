@@ -339,36 +339,45 @@ export default function Home() {
 
       {/* Dan Abramov proof point callout */}
       <section className="px-6 py-12 max-w-4xl mx-auto">
-        <div className="rounded-xl border border-border bg-surface p-8 flex flex-col sm:flex-row gap-8 items-start">
-          <div className="flex-1">
-            <p className="text-xs font-semibold uppercase tracking-widest text-brand-pink mb-2">Featured proof point</p>
-            <h3 className="text-xl font-bold mb-3">Replay solved a bug that stumped Dan Abramov</h3>
-            <p className="text-sm text-muted leading-relaxed mb-4">
-              Dan had been manually debugging a React 19 race condition. Replay&apos;s agent traced it to root cause in 7 minutes — using the same time-travel recording data that powers our CI Agent analysis. The analysis identified the exact fix without any human intervention.
-            </p>
+        <div className="rounded-xl border border-border bg-surface p-8 flex flex-col gap-6">
+          {/* Top row: image left, text right */}
+          <div className="flex flex-col sm:flex-row gap-8 items-start">
             <a
               href="https://www.replay.io/blog/replay-time-travelogue-how-replay-mcp-helped-find-a-react-bug-faster-than-dan-abramov-did"
-              className="text-sm font-medium text-brand-pink hover:opacity-80 transition"
+              className="flex-shrink-0 sm:w-72 hover:opacity-90 transition"
               target="_blank"
               rel="noopener noreferrer"
             >
-              Read the full story &rarr;
+              <Image
+                src={travelogueDan}
+                alt="Replay Time Travelogue — Dan Abramov"
+                className="border border-border w-full h-auto object-cover"
+              />
             </a>
+            <div className="flex-1">
+              <p className="text-xs font-semibold uppercase tracking-widest text-brand-pink mb-2">Featured proof point</p>
+              <h3 className="text-xl font-bold mb-3">Replay solved a bug that stumped Dan Abramov</h3>
+              <p className="text-sm text-muted leading-relaxed mb-4">
+                Dan had been manually debugging a React 19 race condition. Replay&apos;s agent traced it to root cause in 7 minutes — using the same time-travel recording data that powers our CI Agent analysis. The analysis identified the exact fix without any human intervention.
+              </p>
+              <a
+                href="https://www.replay.io/blog/replay-time-travelogue-how-replay-mcp-helped-find-a-react-bug-faster-than-dan-abramov-did"
+                className="text-sm font-medium text-brand-pink hover:opacity-80 transition"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Read the full story &rarr;
+              </a>
+            </div>
           </div>
-          <div className="flex-shrink-0 sm:w-72 flex flex-col gap-3">
-            <Image
-              src={travelogueDan}
-              alt="Replay Time Travelogue — Dan Abramov"
-              className="border border-border w-full h-auto object-cover"
-            />
-            <blockquote className="rounded-xl bg-surface-tinted border border-border p-4 text-sm leading-relaxed italic text-muted">
-              &ldquo;Replay.io is galaxy brain tooling. Real gamechanger.&rdquo;
-              <div className="mt-2 not-italic">
-                <div className="text-xs font-semibold text-foreground">Dan Abramov</div>
-                <div className="text-xs text-muted">React Maintainer</div>
-              </div>
-            </blockquote>
-          </div>
+          {/* Bottom: quote spanning full width */}
+          <blockquote className="border-t border-border pt-6 text-sm leading-relaxed italic text-muted flex items-baseline gap-4">
+            <span className="flex-1">&ldquo;Replay.io is galaxy brain tooling. Real gamechanger.&rdquo;</span>
+            <span className="not-italic flex-shrink-0 text-right">
+              <span className="text-xs font-semibold text-foreground block">Dan Abramov</span>
+              <span className="text-xs text-muted">React Maintainer</span>
+            </span>
+          </blockquote>
         </div>
       </section>
 
