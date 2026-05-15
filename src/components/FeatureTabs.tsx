@@ -6,19 +6,19 @@ const steps = [
     number: "01",
     title: "Test fails — Replay records",
     description:
-      "Every Playwright run in CI is recorded automatically. When a test fails, the full runtime is captured — DOM mutations, network calls, JS execution frames.",
+      "Every Playwright or Cypress run in CI is recorded automatically. When a test fails, the full runtime is captured — DOM mutations, network calls, JS execution frames. No changes to your test code.",
   },
   {
     number: "02",
-    title: "Replay time-travels through the recording",
+    title: "Replay analyzes the recording",
     description:
-      "Replay's time-travel agent steps forward and backward through the execution, inspects state at any point in time, and traces the exact causal chain from failure to root cause.",
+      "Replay's agent steps through the execution using time-travel debugging data, identifies the exact sequence of events that caused the failure, and determines the root cause with a confidence score.",
   },
   {
     number: "03",
-    title: "Root cause & fix posted as a PR comment",
+    title: "Root cause + suggested fix posted to your PR",
     description:
-      "The CI Agent comments on your PR with the root cause and a suggested fix — which file, which function, what to change, and why. You review the change instead of investigating the failure.",
+      "Replay comments on your PR with its findings — root cause, evidence trail, and a suggested fix with specific file and line references. Your team reads the comment and applies the fix.",
   },
 ];
 
@@ -26,10 +26,10 @@ export default function FeatureTabs() {
   return (
     <section className="px-6 py-24 max-w-6xl mx-auto">
       <h2 className="text-3xl font-bold text-center mb-4 text-foreground">
-        The full loop — test failure to merged fix
+        Every CI failure, automatically analyzed
       </h2>
       <p className="text-muted text-center max-w-2xl mx-auto mb-16">
-        How Replay turns a broken CI build into a shipped fix, without a human in the debugging loop.
+        Replay does the investigation. Your team gets the root cause and a suggested fix — without spending hours in DevTools.
       </p>
 
       <div className="flex flex-col md:flex-row gap-12 md:gap-16 items-center">
