@@ -359,7 +359,7 @@ export default function Home() {
             <Image
               src={travelogueDan}
               alt="Replay Time Travelogue — Dan Abramov"
-              className="rounded-xl border border-border w-full h-auto object-cover"
+              className="border border-border w-full h-auto object-cover"
             />
             <blockquote className="rounded-xl bg-surface-tinted border border-border p-4 text-sm leading-relaxed italic text-muted">
               &ldquo;Replay.io is galaxy brain tooling. Real gamechanger.&rdquo;
