@@ -341,7 +341,7 @@ export default function Home() {
       <section className="px-6 py-12 max-w-4xl mx-auto">
         <div className="rounded-xl border border-border bg-surface p-8 flex flex-col gap-6">
           {/* Top row: image left, text right */}
-          <div className="flex flex-col sm:flex-row gap-8 items-start">
+          <div className="flex flex-col sm:flex-row gap-8 items-stretch">
             <a
               href="https://www.replay.io/blog/replay-time-travelogue-how-replay-mcp-helped-find-a-react-bug-faster-than-dan-abramov-did"
               className="flex-shrink-0 sm:w-72 hover:opacity-90 transition"
@@ -351,7 +351,7 @@ export default function Home() {
               <Image
                 src={travelogueDan}
                 alt="Replay Time Travelogue — Dan Abramov"
-                className="border border-border w-full h-auto object-cover"
+                className="border border-border w-full h-full object-cover"
               />
             </a>
             <div className="flex-1">
@@ -371,12 +371,12 @@ export default function Home() {
             </div>
           </div>
           {/* Bottom: quote spanning full width */}
-          <blockquote className="border-t border-border pt-6 text-sm leading-relaxed italic text-muted flex items-baseline gap-4">
-            <span className="flex-1">&ldquo;Replay.io is galaxy brain tooling. Real gamechanger.&rdquo;</span>
-            <span className="not-italic flex-shrink-0 text-right">
+          <blockquote className="border-t border-border pt-6 text-sm leading-relaxed italic text-muted text-center">
+            <p>&ldquo;Replay.io is galaxy brain tooling. Real gamechanger.&rdquo;</p>
+            <div className="mt-3 not-italic">
               <span className="text-xs font-semibold text-foreground block">Dan Abramov</span>
               <span className="text-xs text-muted">React Maintainer</span>
-            </span>
+            </div>
           </blockquote>
         </div>
       </section>
