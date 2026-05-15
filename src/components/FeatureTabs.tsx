@@ -1,4 +1,5 @@
 import Image from "next/image";
+import ciAgentDemo from "@/images/ci-agent-demo.gif";
 
 const steps = [
   {
@@ -57,8 +58,13 @@ export default function FeatureTabs() {
 
         {/* Right: GIF */}
         <div className="flex-1 w-full">
-          <div className="relative w-full rounded-2xl border border-border overflow-hidden bg-surface-tinted flex items-center justify-center min-h-[360px]">
-            <p className="text-sm text-muted italic">GIF coming soon</p>
+          <div className="relative w-full rounded-2xl border border-border overflow-hidden bg-surface">
+            <Image
+              src={ciAgentDemo}
+              alt="Replay CI Agent demo"
+              className="w-full h-auto"
+              unoptimized
+            />
           </div>
         </div>
 
