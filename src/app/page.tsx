@@ -1,5 +1,6 @@
 import Image from "next/image";
 import desertBgStamps from "@/images/desert-bg-stamps.png";
+import travelogueDan from "@/images/Travelogue-DanAbramov.png";
 import FeatureTabs from "@/components/FeatureTabs";
 import Footer from "@/components/Footer";
 import { FAQSchema, OrganizationSchema } from "@/components/JsonLd";
@@ -354,13 +355,20 @@ export default function Home() {
               Read the full story &rarr;
             </a>
           </div>
-          <blockquote className="flex-shrink-0 sm:w-60 rounded-xl bg-surface-tinted border border-border p-5 text-sm leading-relaxed italic text-muted">
-            &ldquo;Replay.io is galaxy brain tooling. Real gamechanger.&rdquo;
-            <div className="mt-3 not-italic">
-              <div className="text-xs font-semibold text-foreground">Dan Abramov</div>
-              <div className="text-xs text-muted">React Maintainer</div>
-            </div>
-          </blockquote>
+          <div className="flex-shrink-0 sm:w-72 flex flex-col gap-3">
+            <Image
+              src={travelogueDan}
+              alt="Replay Time Travelogue — Dan Abramov"
+              className="rounded-xl border border-border w-full h-auto object-cover"
+            />
+            <blockquote className="rounded-xl bg-surface-tinted border border-border p-4 text-sm leading-relaxed italic text-muted">
+              &ldquo;Replay.io is galaxy brain tooling. Real gamechanger.&rdquo;
+              <div className="mt-2 not-italic">
+                <div className="text-xs font-semibold text-foreground">Dan Abramov</div>
+                <div className="text-xs text-muted">React Maintainer</div>
+              </div>
+            </blockquote>
+          </div>
         </div>
       </section>
 
