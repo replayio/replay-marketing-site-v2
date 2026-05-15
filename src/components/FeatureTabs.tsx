@@ -6,7 +6,7 @@ const steps = [
     number: "01",
     title: "Test fails — Replay records",
     description:
-      "Every Playwright or Cypress run in CI is recorded automatically. When a test fails, the full runtime is captured — DOM mutations, network calls, JS execution frames. No changes to your test code.",
+      "Every Playwright run in CI is recorded automatically. When a test fails, the full runtime is captured — DOM mutations, network calls, JS execution frames. No changes to your test code.",
   },
   {
     number: "02",
@@ -50,7 +50,7 @@ export default function FeatureTabs() {
               {/* Content */}
               <div className={i < steps.length - 1 ? "pb-8" : ""}>
                 <h3 className="text-base font-semibold mb-1.5 leading-snug">{step.title}</h3>
-                <p className="text-sm text-muted leading-relaxed">{step.description}</p>
+                <p className="text-xs text-muted leading-relaxed">{step.description}</p>
               </div>
             </div>
           ))}
