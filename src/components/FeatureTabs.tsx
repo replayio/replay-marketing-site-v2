@@ -29,7 +29,7 @@ export default function FeatureTabs() {
         Every CI failure, automatically analyzed
       </h2>
       <p className="text-muted text-center max-w-2xl mx-auto mb-16">
-        Replay does the investigation. Your team gets the root cause and a suggested fix — without spending hours in DevTools.
+        Replay does the investigation. Your team gets the root cause and a suggested fix — without spending hours debugging.
       </p>
 
       <div className="flex flex-col md:flex-row gap-12 md:gap-16 items-center">
