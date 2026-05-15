@@ -162,22 +162,7 @@ export default function Home() {
       </div>
 
 
-      {/* Framework compatibility */}
-      <section className="px-6 py-10 max-w-4xl mx-auto">
-        <div className="rounded-xl border border-border bg-surface px-8 py-6 flex flex-col sm:flex-row sm:items-center gap-4 justify-between">
-          <div>
-            <h3 className="text-base font-semibold mb-1">Works with any JavaScript app</h3>
-            <p className="text-sm text-muted leading-relaxed max-w-lg">
-              Replay captures full execution data for any JS or TypeScript stack — Next.js, Vue, Svelte, vanilla JS. React apps get additional depth: component re-render trees, hook state, and prop diffs at every point in time.
-            </p>
-          </div>
-          <span className="flex-shrink-0 inline-flex items-center gap-2 rounded-full border border-brand-purple/30 bg-brand-purple/5 px-4 py-2 text-sm text-brand-purple font-medium whitespace-nowrap">
-            Deeper insights for React
-          </span>
-        </div>
-      </section>
-
-      {/* Technical Depth */}
+{/* Technical Depth */}
       <section className="px-6 py-24 max-w-5xl mx-auto">
         <h2 className="text-3xl font-bold text-center mb-4">
           Analysis that used to require a staff engineer
