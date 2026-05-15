@@ -162,9 +162,6 @@ export default function PricingCards() {
             >
               Get started
             </a>
-            <p className="text-center text-xs text-muted mt-3">
-              No credit card required
-            </p>
           </div>
 
           {/* Enterprise */}
