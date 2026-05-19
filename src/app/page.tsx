@@ -436,7 +436,7 @@ export default function Home() {
               <div key={row.label} className={`grid grid-cols-3 ${i < arr.length - 1 ? "border-b border-border" : ""} ${i % 2 === 0 ? "bg-surface" : "bg-surface-tinted"}`}>
                 <div className="px-6 py-4 text-sm font-semibold text-foreground">{row.label}</div>
                 <div className="px-6 py-4 text-sm text-muted border-l border-border">{row.without}</div>
-                <div className="px-6 py-4 text-sm text-foreground/80 border-l border-border/50 bg-brand-purple/[0.03]">{row.with}</div>
+                <div className="px-6 py-4 text-sm font-semibold text-foreground/80 border-l border-border/50 bg-brand-purple/[0.03]">{row.with}</div>
               </div>
             ))}
           </div>
