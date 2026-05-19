@@ -96,6 +96,35 @@ export default function DebuggingPage() {
         </section>
       </div>
 
+      {/* That's why we created Replay */}
+      <section className="px-6 py-20 max-w-3xl mx-auto text-center">
+        <p className="text-sm font-medium uppercase tracking-widest text-brand-pink mb-4">
+          That&apos;s why we created Replay
+        </p>
+        <h2 className="text-3xl sm:text-4xl font-bold mb-6 leading-tight">
+          Give your agent
+          <br className="hidden sm:block" />
+          the power of time-travel
+        </h2>
+        <p className="text-lg text-muted max-w-2xl mx-auto leading-relaxed mb-10">
+          Replay captures a deterministic recording — every DOM change, network request, JS execution frame, and state update. Your agent can analyze it, trace the exact causal chain, and identify the root cause. Or you can inspect it yourself in DevTools. No guessing. No re-running with extra logs.
+        </p>
+        <div className="max-w-2xl mx-auto flex flex-col sm:flex-row items-center gap-6 border border-border rounded-xl p-5">
+          <div className="w-64 flex-shrink-0 aspect-video rounded-lg overflow-hidden">
+            <iframe
+              src="https://www.youtube.com/embed/Ew5Yc2Hni-8"
+              title="That's why we created Replay"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+              className="w-full h-full"
+            />
+          </div>
+          <p className="text-sm text-muted leading-relaxed">
+            You might be thinking &ldquo;<em className="italic underline decoration-brand-pink decoration-1">how is this different than the monitoring tools I&apos;m already using?</em>&rdquo; We made this video for you.
+          </p>
+        </div>
+      </section>
+
       {/* Problem */}
       <div className="bg-surface-tinted">
         <section className="px-6 py-24 max-w-3xl mx-auto">
