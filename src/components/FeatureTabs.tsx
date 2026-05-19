@@ -26,7 +26,7 @@ export default function FeatureTabs() {
   return (
     <section className="px-6 py-24 max-w-6xl mx-auto">
       <h2 className="text-3xl font-bold text-center mb-4 text-foreground">
-        Every CI failure, automatically analyzed
+        Test fails &rarr; Agent investigates &rarr; Fix posted
       </h2>
       <p className="text-muted text-center max-w-2xl mx-auto mb-16">
         Replay does the investigation. Your team gets the root cause and a suggested fix — without spending hours debugging.
