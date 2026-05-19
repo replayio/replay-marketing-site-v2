@@ -120,7 +120,7 @@ export default function Home() {
       </div>
 
       {/* How It Works — Interactive Tabs */}
-      <div id="how-it-works" className="bg-surface-tinted">
+      <div id="how-it-works">
         <FeatureTabs />
       </div>
 
