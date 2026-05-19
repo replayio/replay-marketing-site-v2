@@ -459,9 +459,6 @@ export default function Home() {
             {[
               { name: "Playwright", logo: "/logos/playwright.svg" },
               { name: "Cypress", logo: "/logos/cypress.svg" },
-              { name: "GitHub Actions", logo: "/logos/github-actions.svg" },
-              { name: "CircleCI", logo: "/logos/circleci.svg" },
-              { name: "Jenkins", logo: "/logos/jenkins.svg" },
             ].map((item) => (
               <span
                 key={item.name}
