@@ -131,8 +131,7 @@ export default function Home() {
           Analysis that used to require a staff engineer
         </h2>
         <p className="text-muted text-center max-w-2xl mx-auto mb-16">
-          Three classes of runtime bugs that require seeing the actual execution
-          — not a trace. Now deliverable by your coding agent.
+          Replay captures deterministic recordings — not screenshots, not logs, but the actual program execution. The agent can inspect:
         </p>
         <div className="grid md:grid-cols-3 gap-8">
           <div className="rounded-xl border border-border bg-surface p-8">
