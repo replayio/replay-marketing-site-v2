@@ -150,6 +150,9 @@ export default function Home() {
             </div>
           ))}
         </div>
+        <p className="text-center text-sm text-muted italic mt-8">
+          This isn&apos;t guessing from error messages. It&apos;s reading the actual execution.
+        </p>
       </section>
 
       {/* Social Proof */}
