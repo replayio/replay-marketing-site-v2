@@ -126,33 +126,82 @@ export default function DebuggingPage() {
         <h2 className="text-3xl sm:text-4xl font-bold text-center mb-16 leading-tight">
           Record &rarr; Investigate &rarr; Fix
         </h2>
-        <div className="grid md:grid-cols-3 gap-8">
-          <div className="rounded-xl border border-border bg-surface p-8">
-            <div className="w-9 h-9 rounded-full bg-brand-pink/10 flex items-center justify-center mb-4">
-              <span className="text-brand-pink font-bold text-sm">1</span>
+
+        <div className="flex flex-col gap-10">
+          {/* Step 1 */}
+          <div className="flex gap-6">
+            <div className="flex flex-col items-center">
+              <div className="w-9 h-9 rounded-full bg-brand-pink/10 border border-brand-pink/30 flex items-center justify-center flex-shrink-0">
+                <span className="text-brand-pink font-bold text-sm">1</span>
+              </div>
+              <div className="w-px flex-1 bg-border mt-2" />
             </div>
-            <h3 className="text-base font-semibold mb-3">Record the bug</h3>
-            <p className="text-sm text-muted leading-relaxed">
-              Reproduce the issue while Replay captures everything. Use the CLI (<code className="font-mono text-xs bg-surface-tinted px-1 py-0.5 rounded">npx replayio record &lt;url&gt;</code>), the Chrome extension, or let your coding agent trigger the recording. You get a deterministic replay — not a video, the actual program execution.
-            </p>
+            <div className="pb-10 flex-1">
+              <h3 className="text-base font-semibold mb-4">Record the bug</h3>
+              <p className="text-sm text-muted leading-relaxed mb-5">
+                Reproduce the issue while Replay captures everything — every function call, every state change, every network request. Not a video. The actual program execution.
+              </p>
+              <div className="rounded-xl border border-border overflow-hidden">
+                <table className="w-full text-sm">
+                  <thead>
+                    <tr className="border-b border-border bg-surface-tinted">
+                      <th className="text-left px-4 py-3 text-xs font-semibold uppercase tracking-widest text-muted">Method</th>
+                      <th className="text-left px-4 py-3 text-xs font-semibold uppercase tracking-widest text-muted">Best for</th>
+                      <th className="text-left px-4 py-3 text-xs font-semibold uppercase tracking-widest text-muted">How</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr className="border-b border-border bg-surface">
+                      <td className="px-4 py-3.5 font-medium whitespace-nowrap">
+                        Replay CLI<br />
+                        <code className="font-mono text-xs text-muted">replayio</code>
+                      </td>
+                      <td className="px-4 py-3.5 text-muted">Developers comfortable with the terminal, CI integration, agent-driven recording</td>
+                      <td className="px-4 py-3.5 text-muted">
+                        <code className="font-mono text-xs bg-surface-tinted px-1.5 py-0.5 rounded">npx replayio record &lt;url&gt;</code>
+                        <span className="block mt-1 text-xs">— or let your coding agent run it</span>
+                      </td>
+                    </tr>
+                    <tr className="bg-surface">
+                      <td className="px-4 py-3.5 font-medium whitespace-nowrap">Chrome Extension</td>
+                      <td className="px-4 py-3.5 text-muted">Quick captures, visual workflows, vibe coding</td>
+                      <td className="px-4 py-3.5 text-muted">Click the Replay extension icon &rarr; reproduce the bug &rarr; stop recording</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
           </div>
-          <div className="rounded-xl border border-border bg-surface p-8">
-            <div className="w-9 h-9 rounded-full bg-brand-pink/10 flex items-center justify-center mb-4">
-              <span className="text-brand-pink font-bold text-sm">2</span>
+
+          {/* Step 2 */}
+          <div className="flex gap-6">
+            <div className="flex flex-col items-center">
+              <div className="w-9 h-9 rounded-full bg-brand-pink/10 border border-brand-pink/30 flex items-center justify-center flex-shrink-0">
+                <span className="text-brand-pink font-bold text-sm">2</span>
+              </div>
+              <div className="w-px flex-1 bg-border mt-2" />
             </div>
-            <h3 className="text-base font-semibold mb-3">Investigate</h3>
-            <p className="text-sm text-muted leading-relaxed">
-              Add Replay MCP to your coding agent (Claude Code, Codex, Cursor, etc.) and point it at the recording. Your agent can now inspect the actual runtime — set logpoints, trace function calls, examine state changes, follow render chains. Or dig in yourself with Replay DevTools.
-            </p>
+            <div className="pb-10 flex-1">
+              <h3 className="text-base font-semibold mb-3">Investigate</h3>
+              <p className="text-sm text-muted leading-relaxed">
+                Add Replay MCP to your coding agent (Claude Code, Codex, Cursor, etc.) and point it at the recording. Your agent can now inspect the actual runtime — set logpoints, trace function calls, examine state changes, follow render chains. Or dig in yourself with Replay DevTools.
+              </p>
+            </div>
           </div>
-          <div className="rounded-xl border border-border bg-surface p-8">
-            <div className="w-9 h-9 rounded-full bg-brand-pink/10 flex items-center justify-center mb-4">
-              <span className="text-brand-pink font-bold text-sm">3</span>
+
+          {/* Step 3 */}
+          <div className="flex gap-6">
+            <div className="flex flex-col items-center">
+              <div className="w-9 h-9 rounded-full bg-brand-pink/10 border border-brand-pink/30 flex items-center justify-center flex-shrink-0">
+                <span className="text-brand-pink font-bold text-sm">3</span>
+              </div>
             </div>
-            <h3 className="text-base font-semibold mb-3">Fix with confidence</h3>
-            <p className="text-sm text-muted leading-relaxed">
-              Whether your agent found it or you did, you now know <em>exactly</em> what happened. The root cause is clear because you saw it in the actual execution — not inferred from logs or guessed from the stack trace.
-            </p>
+            <div className="flex-1">
+              <h3 className="text-base font-semibold mb-3">Fix with confidence</h3>
+              <p className="text-sm text-muted leading-relaxed">
+                Whether your agent found it or you did, you now know <em>exactly</em> what happened. The root cause is clear because you saw it in the actual execution — not inferred from logs or guessed from the stack trace.
+              </p>
+            </div>
           </div>
         </div>
       </section>
