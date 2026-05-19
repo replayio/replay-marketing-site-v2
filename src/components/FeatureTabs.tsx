@@ -69,6 +69,16 @@ export default function FeatureTabs() {
         </div>
 
       </div>
+
+      <div className="flex justify-center mt-12">
+        <a
+          href="https://app.replay.io/sign-up"
+          className="inline-block rounded-full px-8 py-3.5 text-base font-medium text-white hover:opacity-90 transition"
+          style={{ background: "var(--brand-gradient)" }}
+        >
+          Try Replay for free &rarr;
+        </a>
+      </div>
     </section>
   );
 }
