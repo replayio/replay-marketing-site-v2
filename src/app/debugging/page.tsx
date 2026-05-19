@@ -96,6 +96,28 @@ export default function DebuggingPage() {
         </section>
       </div>
 
+      {/* Problem */}
+      <div className="bg-surface-tinted">
+        <section className="px-6 py-24 max-w-3xl mx-auto">
+          <h2 className="text-3xl sm:text-4xl font-bold text-center mb-6 leading-tight">
+            Your agent is fast.
+            <br />
+            <span className="text-brand-pink">But it&apos;s debugging blind.</span>
+          </h2>
+          <div className="space-y-6 text-muted text-lg leading-relaxed">
+            <p>
+              Your coding agent can read your code, run your tests, and suggest fixes. But when the bug is subtle — a race condition, a state update that fires twice, a redirect that silently fails — it&apos;s stuck guessing from error messages and source code alone.
+            </p>
+            <p>
+              It doesn&apos;t know what actually <em>happened</em> at runtime. It can&apos;t see which component re-rendered, what the network response actually contained, or which event handler fired first. So it suggests a fix, you try it, it doesn&apos;t work, and the cycle repeats.
+            </p>
+            <p>
+              <span className="text-foreground font-medium">Replay gives your agent — and you — the runtime data that turns guessing into knowing.</span>
+            </p>
+          </div>
+        </section>
+      </div>
+
       {/* That's why we created Replay */}
       <section className="px-6 py-20 max-w-3xl mx-auto text-center">
         <p className="text-sm font-medium uppercase tracking-widest text-brand-pink mb-4">
@@ -124,28 +146,6 @@ export default function DebuggingPage() {
           </p>
         </div>
       </section>
-
-      {/* Problem */}
-      <div className="bg-surface-tinted">
-        <section className="px-6 py-24 max-w-3xl mx-auto">
-          <h2 className="text-3xl sm:text-4xl font-bold text-center mb-6 leading-tight">
-            Your agent is fast.
-            <br />
-            <span className="text-brand-pink">But it&apos;s debugging blind.</span>
-          </h2>
-          <div className="space-y-6 text-muted text-lg leading-relaxed">
-            <p>
-              Your coding agent can read your code, run your tests, and suggest fixes. But when the bug is subtle — a race condition, a state update that fires twice, a redirect that silently fails — it&apos;s stuck guessing from error messages and source code alone.
-            </p>
-            <p>
-              It doesn&apos;t know what actually <em>happened</em> at runtime. It can&apos;t see which component re-rendered, what the network response actually contained, or which event handler fired first. So it suggests a fix, you try it, it doesn&apos;t work, and the cycle repeats.
-            </p>
-            <p>
-              <span className="text-foreground font-medium">Replay gives your agent — and you — the runtime data that turns guessing into knowing.</span>
-            </p>
-          </div>
-        </section>
-      </div>
 
       {/* How It Works */}
       <section className="px-6 py-24 max-w-4xl mx-auto">
