@@ -4,21 +4,21 @@ import ciAgentDemo from "@/images/ci-agent-demo-large.gif";
 const steps = [
   {
     number: "01",
-    title: "Test fails — Replay records",
+    title: "Record",
     description:
-      "Every Playwright run in CI is recorded automatically. When a test fails, the full runtime is captured — DOM mutations, network calls, JS execution frames. No changes to your test code.",
+      "Every E2E test run is automatically recorded — every function call, every DOM mutation, every network request, every state change captured deterministically. No code changes to your tests — just swap in Replay in your Playwright or Cypress config.",
   },
   {
     number: "02",
-    title: "Replay analyzes the recording",
+    title: "Analyze",
     description:
-      "Replay's agent steps through the execution using time-travel debugging data, identifies the exact sequence of events that caused the failure, and determines the root cause with a confidence score.",
+      "When a test fails, Replay's agent opens the recording and investigates using time-travel debugging data: every function call, every DOM mutation, every network request, every state change. It traces the exact sequence of events that caused the failure.",
   },
   {
     number: "03",
-    title: "Root cause + suggested fix posted to your PR",
+    title: "Report",
     description:
-      "Replay comments on your PR with its findings — root cause, evidence trail, and a suggested fix with specific file and line references. Your team reads the comment and applies the fix.",
+      "The agent posts a detailed analysis as a GitHub comment on your PR: root cause with confidence level, step-by-step failure sequence, suggested fix with specific file and code changes, and an evidence trail citing actual runtime data.",
   },
 ];
 
