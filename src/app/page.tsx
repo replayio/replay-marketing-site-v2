@@ -133,52 +133,22 @@ export default function Home() {
         <p className="text-muted text-center max-w-2xl mx-auto mb-16">
           Replay captures deterministic recordings — not screenshots, not logs, but the actual program execution. The agent can inspect:
         </p>
-        <div className="grid md:grid-cols-3 gap-8">
-          <div className="rounded-xl border border-border bg-surface p-8">
-            <h3 className="text-lg font-semibold mb-3">
-              Render-to-cause chains
-            </h3>
-            <p className="text-sm text-muted leading-relaxed mb-4">
-              Why did this component re-render 14 times? Trace it backward
-              through the dependency graph to the exact state mutation. Not a
-              guess — the actual render tree at the moment it happened.
-            </p>
-            <div className="rounded-lg bg-surface-tinted p-4 text-xs text-muted italic leading-relaxed">
-              &ldquo;CartSummary re-rendered 14 times on a single click. Root
-              cause: useCartState returned a new object reference on every call.
-              The selector was never memoized.&rdquo;
+        <div className="max-w-3xl mx-auto rounded-xl border border-border overflow-hidden">
+          {[
+            { label: "Render chains", detail: "Which component re-rendered, what triggered it, what changed" },
+            { label: "State flow", detail: "Redux actions, React state updates, context changes across the component tree" },
+            { label: "Network timing", detail: "Every request and response, with exact payload and timing data" },
+            { label: "JS execution", detail: "Every function call on every frame, with arguments and return values" },
+            { label: "DOM mutations", detail: "What changed in the DOM, when, and what code caused it" },
+          ].map((row, i, arr) => (
+            <div
+              key={row.label}
+              className={`flex items-baseline gap-6 px-6 py-4 ${i < arr.length - 1 ? "border-b border-border" : ""} ${i % 2 === 0 ? "bg-surface" : "bg-surface-tinted"}`}
+            >
+              <span className="w-36 flex-shrink-0 text-sm font-semibold text-foreground">{row.label}</span>
+              <span className="text-sm text-muted leading-relaxed">{row.detail}</span>
             </div>
-          </div>
-          <div className="rounded-xl border border-border bg-surface p-8">
-            <h3 className="text-lg font-semibold mb-3">
-              Selector reference tracking
-            </h3>
-            <p className="text-sm text-muted leading-relaxed mb-4">
-              Which selector read stale data? When did it change? Replay tracks
-              every reference so your agent answers these questions without
-              adding a single log line to your codebase.
-            </p>
-            <div className="rounded-lg bg-surface-tinted p-4 text-xs text-muted italic leading-relaxed">
-              &ldquo;selectUserPermissions returned the pre-login value at
-              t+340ms. The auth slice updated at t+280ms but the selector cache
-              wasn&apos;t invalidated.&rdquo;
-            </div>
-          </div>
-          <div className="rounded-xl border border-border bg-surface p-8">
-            <h3 className="text-lg font-semibold mb-3">
-              JS execution, frame by frame
-            </h3>
-            <p className="text-sm text-muted leading-relaxed mb-4">
-              Step through any JavaScript frame in order. Add console.logs
-              retroactively. Set breakpoints that didn&apos;t exist when the bug
-              happened. This is impossible with logs — it requires the recording.
-            </p>
-            <div className="rounded-lg bg-surface-tinted p-4 text-xs text-muted italic leading-relaxed">
-              &ldquo;The race condition is in PaymentFlow.tsx line 83. The
-              onSubmit handler fires before the async validation resolves.
-              Here&apos;s the fix.&rdquo;
-            </div>
-          </div>
+          ))}
         </div>
       </section>
 
