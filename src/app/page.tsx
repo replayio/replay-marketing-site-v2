@@ -394,33 +394,51 @@ export default function Home() {
           <h2 className="text-3xl font-bold text-center mb-12">
             With Replay CI Agent vs. without
           </h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="rounded-xl border border-border bg-surface p-8">
-              <h3 className="text-brand-pink font-semibold text-sm uppercase tracking-widest mb-4">
-                Without Replay
-              </h3>
-              <ul className="space-y-3 text-sm text-muted">
-                <li>Test fails &rarr; read error message, guess at cause</li>
-                <li>Root cause requires manual reproduction, console.logs, trial and error</li>
-                <li>30 min to 2+ hours per failure</li>
-                <li>Flaky tests get marked as flaky, ignored, accumulate</li>
-                <li>PRs blocked, CI re-runs burn time and money</li>
-                <li>Requires deep codebase knowledge to investigate</li>
-              </ul>
+          <div className="rounded-xl border border-border overflow-hidden">
+            {/* Header row */}
+            <div className="grid grid-cols-3 bg-surface-tinted border-b border-border">
+              <div className="px-6 py-3" />
+              <div className="px-6 py-3 text-xs font-semibold uppercase tracking-widest text-muted border-l border-border">Without Replay</div>
+              <div className="px-6 py-3 text-xs font-semibold uppercase tracking-widest text-brand-purple border-l border-border">With Replay CI Agent</div>
             </div>
-            <div className="rounded-xl border border-brand-purple/30 bg-brand-purple/5 p-8">
-              <h3 className="text-brand-purple font-semibold text-sm uppercase tracking-widest mb-4">
-                With Replay CI Agent
-              </h3>
-              <ul className="space-y-3 text-sm text-foreground/80">
-                <li>Test fails &rarr; agent traces exact failure sequence</li>
-                <li>Root cause identified automatically with confidence score</li>
-                <li>Fix suggestion posted in minutes</li>
-                <li>Each failure investigated individually with runtime evidence</li>
-                <li>Developer reads comment, applies fix, merges</li>
-                <li>Zero investigation effort — agent does the work</li>
-              </ul>
-            </div>
+            {[
+              {
+                label: "Test fails",
+                without: "Read error message, guess at cause",
+                with: "Agent traces exact failure sequence",
+              },
+              {
+                label: "Root cause",
+                without: "Manual reproduction, console.logs, trial and error",
+                with: "Identified automatically with confidence score",
+              },
+              {
+                label: "Time to fix",
+                without: "30 min to 2+ hours per failure",
+                with: "Fix suggestion posted in minutes",
+              },
+              {
+                label: "Flaky tests",
+                without: "Marked as flaky, ignored, accumulate",
+                with: "Each failure investigated individually with runtime evidence",
+              },
+              {
+                label: "Team impact",
+                without: "PRs blocked, CI re-runs burning time and money",
+                with: "Developer reads comment, applies fix, merges",
+              },
+              {
+                label: "Effort",
+                without: "High — requires deep codebase knowledge",
+                with: "Zero — agent does the investigation",
+              },
+            ].map((row, i, arr) => (
+              <div key={row.label} className={`grid grid-cols-3 ${i < arr.length - 1 ? "border-b border-border" : ""} ${i % 2 === 0 ? "bg-surface" : "bg-surface-tinted"}`}>
+                <div className="px-6 py-4 text-sm font-semibold text-foreground">{row.label}</div>
+                <div className="px-6 py-4 text-sm text-muted border-l border-border">{row.without}</div>
+                <div className="px-6 py-4 text-sm text-foreground/80 border-l border-border/50 bg-brand-purple/[0.03]">{row.with}</div>
+              </div>
+            ))}
           </div>
         </section>
       </div>
