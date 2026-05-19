@@ -182,10 +182,24 @@ export default function DebuggingPage() {
               <div className="w-px flex-1 bg-border mt-2" />
             </div>
             <div className="pb-10 flex-1">
-              <h3 className="text-base font-semibold mb-3">Investigate</h3>
-              <p className="text-sm text-muted leading-relaxed">
-                Add Replay MCP to your coding agent (Claude Code, Codex, Cursor, etc.) and point it at the recording. Your agent can now inspect the actual runtime — set logpoints, trace function calls, examine state changes, follow render chains. Or dig in yourself with Replay DevTools.
+              <h3 className="text-base font-semibold mb-4">Investigate</h3>
+              <p className="text-sm text-muted leading-relaxed mb-5">
+                Once you have a recording, you have two paths:
               </p>
+              <div className="flex flex-col gap-4">
+                <div className="rounded-xl border border-border bg-surface p-5">
+                  <h4 className="text-sm font-semibold mb-2">Let your coding agent investigate via Replay MCP</h4>
+                  <p className="text-sm text-muted leading-relaxed">
+                    Add Replay MCP to your coding agent (Claude Code, Codex, Cursor, etc.). Point it at the recording. Your agent can now inspect the actual runtime — set logpoints, trace function calls, examine state changes, follow render chains. It&apos;s debugging with evidence instead of guessing from source code.
+                  </p>
+                </div>
+                <div className="rounded-xl border border-border bg-surface p-5">
+                  <h4 className="text-sm font-semibold mb-2">Investigate yourself with Replay DevTools</h4>
+                  <p className="text-sm text-muted leading-relaxed">
+                    Open the recording in Replay DevTools — a familiar browser DevTools interface with time-travel superpowers. Step forward and backward through execution. Add logpoints (like console.logs, but retroactive — no re-running needed). Inspect any moment in the recording as if you paused the debugger right there.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
 
