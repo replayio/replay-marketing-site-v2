@@ -98,31 +98,22 @@ export default function Home() {
       <div className="bg-surface-tinted">
         <section id="problem" className="px-6 py-24 max-w-3xl mx-auto">
           <h2 className="text-3xl sm:text-4xl font-bold text-center mb-6 leading-tight">
-            Your CI fails.
+            The test assertion tells you what failed.
             <br />
-            <span className="text-brand-pink">Your team debugs. Repeat.</span>
+            <span className="text-brand-pink">Not why.</span>
           </h2>
           <div className="space-y-6 text-muted text-lg leading-relaxed">
             <p>
-              A test fails in CI. The test assertion tells you what failed—not what broke.
-              Someone opens DevTools, reproduces it locally if they&apos;re lucky,
-              and eventually figures out the root cause. That&apos;s an hour per
-              failure. Multiply by your team.
+              Your Playwright test fails. The error says <code className="font-mono text-sm bg-surface border border-border px-1.5 py-0.5 rounded">expect(page.getByTestId(&apos;submit-btn&apos;)).toBeVisible()</code> — timeout after 30 seconds. Why isn&apos;t the button there? Could be a dozen reasons.
             </p>
             <p>
-              Your coding agents make this worse. They can write code faster than
-              ever, but when something breaks at runtime they&apos;re debugging
-              blind — guessing at fixes, looping on the same failure, burning
-              tokens without making progress.{" "}
-              <span className="text-foreground font-medium">
-                The bottleneck isn&apos;t writing code. It&apos;s what happens
-                when it breaks.
-              </span>
+              Your team opens the test, reads the selectors, tries to reproduce locally, adds console.logs, re-runs, waits. Maybe they find it in 20 minutes. Maybe it takes two hours. Maybe they mark it as flaky and move on.
             </p>
             <p>
-              So teams do the rational thing: they avoid writing more automated
-              tests, because the maintenance overhead isn&apos;t worth it.
-              Coverage stagnates. Confidence erodes.
+              Your coding agent tries to help — but without runtime data, it&apos;s guessing from the error message just like you are. It suggests a fix, the test still fails, it tries again, burns tokens, goes in circles.
+            </p>
+            <p>
+              Meanwhile, PRs sit blocked. CI re-runs burn time and money. The team stops trusting the test suite — failures get ignored, flaky tests accumulate, bad code slips through.
             </p>
           </div>
         </section>
