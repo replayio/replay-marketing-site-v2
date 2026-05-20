@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Footer from "@/components/Footer";
 import Nav from "@/components/Nav";
 import WarpSpeedBg from "@/components/WarpSpeedBg";
+import LoopQAHowItWorks from "./LoopQAHowItWorks";
 
 export const metadata: Metadata = {
   title: "Loop QA — Autonomous QA for the Vibecoding Era",
@@ -224,80 +225,7 @@ export default function LoopQAPage() {
         </section>
       </div>
 
-      {/* How it works */}
-      <section className="px-6 py-24 max-w-4xl mx-auto">
-        <p className="text-sm font-medium uppercase tracking-widest text-brand-pink mb-4 text-center">
-          How it works
-        </p>
-        <h2 className="text-3xl sm:text-4xl font-bold text-center mb-16 leading-tight">
-          From URL to bug report — automatically
-        </h2>
-
-        <div className="flex flex-col gap-10">
-          {/* Step 1 */}
-          <div className="flex gap-6">
-            <div className="flex flex-col items-center">
-              <div className="w-9 h-9 rounded-full bg-brand-pink/10 border border-brand-pink/30 flex items-center justify-center flex-shrink-0">
-                <span className="text-brand-pink font-bold text-sm">1</span>
-              </div>
-              <div className="w-px flex-1 bg-border mt-2" />
-            </div>
-            <div className="pb-10 flex-1">
-              <h3 className="text-base font-semibold mb-2">Give it a URL</h3>
-              <p className="text-sm text-muted leading-relaxed">
-                Point Loop QA at any web app — a marketing site, a SaaS product, an internal tool, or all of the above. No configuration, no test files, no setup beyond the URL.
-              </p>
-            </div>
-          </div>
-
-          {/* Step 2 */}
-          <div className="flex gap-6">
-            <div className="flex flex-col items-center">
-              <div className="w-9 h-9 rounded-full bg-brand-pink/10 border border-brand-pink/30 flex items-center justify-center flex-shrink-0">
-                <span className="text-brand-pink font-bold text-sm">2</span>
-              </div>
-              <div className="w-px flex-1 bg-border mt-2" />
-            </div>
-            <div className="pb-10 flex-1">
-              <h3 className="text-base font-semibold mb-2">Discovers journeys and writes tests</h3>
-              <p className="text-sm text-muted leading-relaxed">
-                Loop QA explores your app the way a user would — navigating flows, filling forms, triggering interactions. It identifies meaningful user journeys and writes Playwright tests for each one. No human authoring required.
-              </p>
-            </div>
-          </div>
-
-          {/* Step 3 */}
-          <div className="flex gap-6">
-            <div className="flex flex-col items-center">
-              <div className="w-9 h-9 rounded-full bg-brand-pink/10 border border-brand-pink/30 flex items-center justify-center flex-shrink-0">
-                <span className="text-brand-pink font-bold text-sm">3</span>
-              </div>
-              <div className="w-px flex-1 bg-border mt-2" />
-            </div>
-            <div className="pb-10 flex-1">
-              <h3 className="text-base font-semibold mb-2">Runs tests with Replay recording</h3>
-              <p className="text-sm text-muted leading-relaxed">
-                Playwright executes every test in a Replay-instrumented browser. Every session is recorded deterministically — every function call, DOM mutation, network request, and state change captured. When something fails, nothing is lost.
-              </p>
-            </div>
-          </div>
-
-          {/* Step 4 */}
-          <div className="flex gap-6">
-            <div className="flex flex-col items-center">
-              <div className="w-9 h-9 rounded-full bg-brand-pink/10 border border-brand-pink/30 flex items-center justify-center flex-shrink-0">
-                <span className="text-brand-pink font-bold text-sm">4</span>
-              </div>
-            </div>
-            <div className="flex-1">
-              <h3 className="text-base font-semibold mb-2">Files detailed bug reports</h3>
-              <p className="text-sm text-muted leading-relaxed">
-                For every bug found, Loop QA files a report with everything needed to understand and fix it — without anyone having to reproduce it manually.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+      <LoopQAHowItWorks />
 
       {/* Bug Reports */}
       <div className="bg-surface-tinted">
