@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Footer from "@/components/Footer";
 import Nav from "@/components/Nav";
-import WarpSpeedBg from "@/components/WarpSpeedBg";
+import Orb from "@/components/Orb";
 import LoopQAHowItWorks from "./LoopQAHowItWorks";
 
 export const metadata: Metadata = {
@@ -75,26 +75,11 @@ export default function LoopQAPage() {
 
       {/* Hero */}
       <div className="relative overflow-hidden">
-        <WarpSpeedBg
-          className="absolute inset-0 opacity-30 dark:opacity-40"
-          config={{
-            speed: 10,
-            targetSpeed: 10,
-            speedAdjFactor: 0.8,
-            density: 0.7,
-            starSize: 2,
-            warpEffect: true,
-            warpEffectLength: 5,
-            depthFade: true,
-            shape: "square",
-            backgroundColor: "#FFFFFF",
-            starColor: "hsl(263,45%,7%)",
-          }}
-          darkConfig={{
-            backgroundColor: "hsl(263,45%,7%)",
-            starColor: "#FFFFFF",
-          }}
-        />
+        <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+          <div style={{ width: "800px", height: "800px", position: "relative" }}>
+            <Orb hue={264} hoverIntensity={0.3} rotateOnHover forceHoverState={false} />
+          </div>
+        </div>
         <section className="hero-fade-in relative z-10 flex flex-col items-center text-center px-6 pt-24 pb-16 max-w-4xl mx-auto">
           <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-border bg-surface text-sm text-muted mb-6">
             <span className="w-1.5 h-1.5 rounded-full bg-brand-pink animate-pulse" />
