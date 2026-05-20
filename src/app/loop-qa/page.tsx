@@ -91,7 +91,7 @@ export default function LoopQAPage() {
             <span className="text-brand-pink">Loop QA finds the bugs.</span>
           </h1>
           <p className="text-lg text-muted max-w-2xl mb-10 leading-relaxed">
-            Drop in a URL and get back a full bug report — automatically. No test suite to write, no QA team required.
+            Autonomous QA that explores your app, finds the bugs, and tells you exactly how to fix them. No test suite to write, no QA team required.
           </p>
           <a
             href="https://loop-qa.replay.io"
