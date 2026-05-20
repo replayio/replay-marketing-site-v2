@@ -107,35 +107,16 @@ export default function LoopQAPage() {
           </p>
         </section>
 
-        {/* Video placeholder */}
+        {/* Video */}
         <div className="relative z-10 px-6 pb-20 max-w-4xl mx-auto">
-          <div
-            className="rounded-2xl border border-border overflow-hidden aspect-video flex items-center justify-center relative shadow-2xl"
-            style={{
-              backgroundImage: "url('/loopQa_screenshot.png')",
-              backgroundSize: "cover",
-              backgroundPosition: "top center",
-            }}
-          >
-            <div className="absolute inset-0 flex items-center justify-center z-10">
-              <div className="w-32 h-32 rounded-full flex items-center justify-center"
-                style={{
-                  background: "rgba(255,255,255,0.15)",
-                  backdropFilter: "blur(12px)",
-                  WebkitBackdropFilter: "blur(12px)",
-                  border: "1px solid rgba(255,255,255,0.35)",
-                  boxShadow: "0 8px 32px rgba(0,0,0,0.15), inset 0 1px 0 rgba(255,255,255,0.4)",
-                }}
-              >
-                <svg width="64" height="64" viewBox="0 0 24 24" fill="none" className="ml-2">
-                  <path d="M5 3l14 9-14 9V3z" fill="#374151" />
-                </svg>
-              </div>
-            </div>
-            <div className="absolute bottom-4 left-0 right-0 flex flex-col items-center z-10">
-              <p className="text-sm font-semibold text-white" style={{ textShadow: "0 1px 4px rgba(0,0,0,0.4)" }}>Product overview video</p>
-              <p className="text-xs text-white/80">Coming soon</p>
-            </div>
+          <div className="rounded-2xl border border-border overflow-hidden aspect-video shadow-2xl">
+            <video
+              className="w-full h-full object-cover"
+              src="/LoopQA_PlaceholderProductOverview.mp4"
+              controls
+              playsInline
+              poster="/loopQa_screenshot.png"
+            />
           </div>
         </div>
       </div>
