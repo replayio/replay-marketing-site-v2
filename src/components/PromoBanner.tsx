@@ -12,7 +12,7 @@ export default function PromoBanner() {
       className="w-full py-2.5 px-4 text-center text-sm text-white flex items-center justify-center gap-3 flex-wrap"
       style={{ background: "var(--brand-gradient)" }}
     >
-      <span>Introducing Loop QA: Test your web apps with confidence</span>
+      <span><strong>Introducing Loop QA:</strong> Test your web apps with confidence</span>
       <Link
         href="/loop-qa"
         className="inline-block rounded-full bg-white/20 hover:bg-white/30 px-3.5 py-1 text-xs font-semibold text-white transition whitespace-nowrap border border-white/30"
