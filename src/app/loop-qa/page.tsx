@@ -110,7 +110,7 @@ export default function LoopQAPage() {
         {/* Video placeholder */}
         <div className="relative z-10 px-6 pb-20 max-w-4xl mx-auto">
           <div
-            className="rounded-2xl border border-border overflow-hidden aspect-video flex items-center justify-center relative"
+            className="rounded-2xl border border-border overflow-hidden aspect-video flex items-center justify-center relative shadow-2xl"
             style={{
               backgroundImage: "url('/loopQa_screenshot.png')",
               backgroundSize: "cover",
