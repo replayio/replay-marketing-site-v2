@@ -145,6 +145,63 @@ export default function LoopQAPage() {
         </div>
       </div>
 
+      {/* How Loop QA Works */}
+      <section className="px-6 py-24 max-w-5xl mx-auto">
+        <h2 className="text-3xl font-bold mb-3 leading-tight">How Loop QA Works</h2>
+        <p className="text-muted max-w-2xl mb-12 leading-relaxed">
+          Loop QA autonomously tests your web app through four stages, each building on the last to deliver thorough coverage and actionable bug reports.
+        </p>
+        <div className="grid sm:grid-cols-2 gap-5">
+          {/* Exploration */}
+          <div className="rounded-xl border border-border bg-surface p-7">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" className="text-muted mb-5">
+              <circle cx="12" cy="12" r="10" />
+              <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76" />
+            </svg>
+            <h3 className="text-base font-semibold mb-3">Exploration</h3>
+            <p className="text-sm text-muted leading-relaxed">
+              Agents map your app by navigating pages, clicking, and filling forms. Each exploration yields <span className="font-semibold text-foreground">journeys</span> — structured flows that mirror how people actually use the product.
+            </p>
+          </div>
+
+          {/* Journey Testing */}
+          <div className="rounded-xl border border-border bg-surface p-7">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" className="text-muted mb-5">
+              <circle cx="6" cy="19" r="3" />
+              <path d="M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15" />
+              <circle cx="18" cy="5" r="3" />
+            </svg>
+            <h3 className="text-base font-semibold mb-3">Journey Testing</h3>
+            <p className="text-sm text-muted leading-relaxed">
+              Journeys replay automatically in a real browser and are captured as Replay sessions. Failures surface with links to the exact recording.
+            </p>
+          </div>
+
+          {/* Polish */}
+          <div className="rounded-xl border border-border bg-surface p-7">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" className="text-muted mb-5">
+              <path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z" />
+            </svg>
+            <h3 className="text-base font-semibold mb-3">Polish</h3>
+            <p className="text-sm text-muted leading-relaxed">
+              A polish pass reviews each recording for issues checks often miss—layout, UX friction, accessibility, and edge-case rendering—and files findings as bugs.
+            </p>
+          </div>
+
+          {/* Bug Root Causes */}
+          <div className="rounded-xl border border-border bg-surface p-7">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" className="text-muted mb-5">
+              <circle cx="11" cy="11" r="8" />
+              <path d="m21 21-4.3-4.3" />
+            </svg>
+            <h3 className="text-base font-semibold mb-3">Bug Root Causes</h3>
+            <p className="text-sm text-muted leading-relaxed">
+              Every bug includes analysis traced through the recording—from what you see back through network, state, and rendering—with evidence deep-linked into the session.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Problem */}
       <div className="bg-surface-tinted">
         <section className="px-6 py-24 max-w-3xl mx-auto">
