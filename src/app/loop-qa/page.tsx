@@ -109,22 +109,24 @@ export default function LoopQAPage() {
 
         {/* Video placeholder */}
         <div className="relative z-10 px-6 pb-20 max-w-4xl mx-auto">
-          <div className="rounded-2xl border border-border bg-surface overflow-hidden aspect-video flex items-center justify-center">
-            <div className="flex flex-col items-center gap-4 text-center px-8">
-              <div className="w-16 h-16 rounded-full bg-brand-pink/10 border border-brand-pink/30 flex items-center justify-center">
-                <svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  className="text-brand-pink ml-1"
-                >
+          <div
+            className="rounded-2xl border border-border overflow-hidden aspect-video flex items-center justify-center relative"
+            style={{
+              backgroundImage: "url('/loopQa_screenshot.png')",
+              backgroundSize: "cover",
+              backgroundPosition: "top center",
+            }}
+          >
+            <div className="absolute inset-0 bg-black/40 rounded-2xl" />
+            <div className="relative z-10 flex flex-col items-center gap-4 text-center px-8">
+              <div className="w-16 h-16 rounded-full bg-white/20 border border-white/30 backdrop-blur-sm flex items-center justify-center">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="text-white ml-1">
                   <path d="M5 3l14 9-14 9V3z" fill="currentColor" />
                 </svg>
               </div>
               <div>
-                <p className="text-sm font-medium text-foreground mb-1">Product overview video</p>
-                <p className="text-xs text-muted">Coming soon</p>
+                <p className="text-sm font-medium text-white mb-1">Product overview video</p>
+                <p className="text-xs text-white/70">Coming soon</p>
               </div>
             </div>
           </div>
