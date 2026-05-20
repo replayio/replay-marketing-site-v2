@@ -117,7 +117,7 @@ export default function LoopQAPage() {
               backgroundPosition: "top center",
             }}
           >
-            <div className="relative z-10 flex flex-col items-center gap-5 text-center px-8">
+            <div className="absolute inset-0 flex items-center justify-center z-10">
               <div className="w-32 h-32 rounded-full flex items-center justify-center"
                 style={{
                   background: "rgba(255,255,255,0.15)",
@@ -131,10 +131,10 @@ export default function LoopQAPage() {
                   <path d="M5 3l14 9-14 9V3z" fill="#374151" />
                 </svg>
               </div>
-              <div>
-                <p className="text-sm font-semibold text-white" style={{ textShadow: "0 1px 4px rgba(0,0,0,0.4)" }}>Product overview video</p>
-                <p className="text-xs text-white/80">Coming soon</p>
-              </div>
+            </div>
+            <div className="absolute bottom-4 left-0 right-0 flex flex-col items-center z-10">
+              <p className="text-sm font-semibold text-white" style={{ textShadow: "0 1px 4px rgba(0,0,0,0.4)" }}>Product overview video</p>
+              <p className="text-xs text-white/80">Coming soon</p>
             </div>
           </div>
         </div>
