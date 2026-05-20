@@ -76,7 +76,7 @@ export default function LoopQAPage() {
       {/* Hero */}
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 pointer-events-none overflow-hidden">
-          <div style={{ width: "1232px", height: "1232px", position: "absolute", top: "50%", left: "50vw", transform: "translate(-50%, -50%)" }}>
+          <div style={{ width: "1232px", height: "1232px", position: "absolute", top: "41%", left: "50vw", transform: "translate(-50%, -50%)" }}>
             <Orb hue={264} hoverIntensity={0.3} rotateOnHover forceHoverState={false} />
           </div>
         </div>
