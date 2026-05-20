@@ -117,7 +117,7 @@ export default function LoopQAPage() {
               backgroundPosition: "top center",
             }}
           >
-            <div className="absolute inset-0 bg-black/40 rounded-2xl" />
+            <div className="absolute inset-0 bg-black/20 rounded-2xl" />
             <div className="relative z-10 flex flex-col items-center gap-4 text-center px-8">
               <div className="w-16 h-16 rounded-full bg-white/20 border border-white/30 backdrop-blur-sm flex items-center justify-center">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="text-white ml-1">
