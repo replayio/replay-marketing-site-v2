@@ -127,8 +127,8 @@ export default function LoopQAPage() {
                   boxShadow: "0 8px 32px rgba(0,0,0,0.15), inset 0 1px 0 rgba(255,255,255,0.4)",
                 }}
               >
-                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" className="ml-2" style={{ filter: "drop-shadow(0 2px 4px rgba(0,0,0,0.3))" }}>
-                  <path d="M5 3l14 9-14 9V3z" fill="white" />
+                <svg width="64" height="64" viewBox="0 0 24 24" fill="none" className="ml-2">
+                  <path d="M5 3l14 9-14 9V3z" fill="#374151" />
                 </svg>
               </div>
               <div>
