@@ -117,15 +117,23 @@ export default function LoopQAPage() {
               backgroundPosition: "top center",
             }}
           >
-            <div className="relative z-10 flex flex-col items-center gap-4 text-center px-8">
-              <div className="w-16 h-16 rounded-full bg-white/20 border border-white/30 backdrop-blur-sm flex items-center justify-center">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="text-white ml-1">
-                  <path d="M5 3l14 9-14 9V3z" fill="currentColor" />
+            <div className="relative z-10 flex flex-col items-center gap-5 text-center px-8">
+              <div className="w-32 h-32 rounded-full flex items-center justify-center"
+                style={{
+                  background: "rgba(255,255,255,0.15)",
+                  backdropFilter: "blur(12px)",
+                  WebkitBackdropFilter: "blur(12px)",
+                  border: "1px solid rgba(255,255,255,0.35)",
+                  boxShadow: "0 8px 32px rgba(0,0,0,0.15), inset 0 1px 0 rgba(255,255,255,0.4)",
+                }}
+              >
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" className="ml-2" style={{ filter: "drop-shadow(0 2px 4px rgba(0,0,0,0.3))" }}>
+                  <path d="M5 3l14 9-14 9V3z" fill="white" />
                 </svg>
               </div>
               <div>
-                <p className="text-sm font-medium text-white mb-1">Product overview video</p>
-                <p className="text-xs text-white/70">Coming soon</p>
+                <p className="text-sm font-semibold text-white" style={{ textShadow: "0 1px 4px rgba(0,0,0,0.4)" }}>Product overview video</p>
+                <p className="text-xs text-white/80">Coming soon</p>
               </div>
             </div>
           </div>
